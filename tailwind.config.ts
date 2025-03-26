@@ -36,7 +36,7 @@ export default {
 				},
 				accent: {
 					purple: '#c084fc',
-					pink: '#f472b6',
+					pink: '#D946EF',
 					DEFAULT: 'hsl(var(--accent))',
 					foreground: 'hsl(var(--accent-foreground))'
 				},
@@ -109,6 +109,16 @@ export default {
 					'0%': { transform: 'scaleY(1)' },
 					'50%': { transform: 'scaleY(0.5)' },
 					'100%': { transform: 'scaleY(1)' },
+				},
+				'sparkle': {
+					'0%, 100%': { 
+						opacity: '0',
+						transform: 'scale(0)'
+					},
+					'50%': { 
+						opacity: '1',
+						transform: 'scale(1)'
+					},
 				}
 			},
 			animation: {
@@ -124,14 +134,22 @@ export default {
 				'wave-3': 'wave 1.4s ease-in-out infinite 0.2s',
 				'wave-4': 'wave 1.3s ease-in-out infinite 0.3s',
 				'wave-5': 'wave 1.5s ease-in-out infinite 0.4s',
+				'sparkle-1': 'sparkle 3s ease-in-out infinite',
+				'sparkle-2': 'sparkle 3s ease-in-out infinite 0.5s',
+				'sparkle-3': 'sparkle 3s ease-in-out infinite 1s',
 			},
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
 				display: ['Montserrat', 'sans-serif'],
 			},
 			boxShadow: {
-				'glass': '0 4px 30px rgba(0, 0, 0, 0.1)',
-				'neon': '0 0 10px rgba(94, 234, 212, 0.7), 0 0 20px rgba(94, 234, 212, 0.5)',
+				'glass': '0 4px 30px rgba(0, 0, 0, 0.3)',
+				'neon': '0 0 15px rgba(94, 234, 212, 0.8), 0 0 30px rgba(94, 234, 212, 0.6)',
+				'neon-accent': '0 0 15px rgba(217, 70, 239, 0.8), 0 0 30px rgba(217, 70, 239, 0.6)',
+			},
+			backgroundImage: {
+				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+				'noise': 'url("data:image/svg+xml,%3Csvg viewBox=\'0 0 200 200\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cfilter id=\'noiseFilter\'%3E%3CfeTurbulence type=\'fractalNoise\' baseFrequency=\'0.65\' numOctaves=\'3\' stitchTiles=\'stitch\'/%3E%3C/filter%3E%3Crect width=\'100%25\' height=\'100%25\' filter=\'url(%23noiseFilter)\'/%3E%3C/svg%3E")',
 			},
 		}
 	},

@@ -5,14 +5,14 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen pt-20 flex items-center overflow-hidden">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 right-0 w-96 h-96 bg-teal/10 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-10 left-10 w-72 h-72 bg-accent-purple/10 rounded-full filter blur-3xl"></div>
+        <div className="absolute top-20 right-0 w-96 h-96 bg-teal/20 rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-10 left-10 w-72 h-72 bg-accent/20 rounded-full filter blur-3xl"></div>
       </div>
       
       <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
         <div className="flex-1 pt-10">
           <motion.span 
-            className="inline-block px-3 py-1 mb-6 rounded-full text-sm font-medium bg-accent text-accent-foreground"
+            className="inline-block px-3 py-1 mb-6 rounded-full text-sm font-medium bg-accent text-accent-foreground shadow-neon-accent"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
@@ -27,8 +27,8 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             Your Podcast<br />
-            <span className="text-teal">Deserves</span> Iconic<br />
-            Music
+            <span className="text-teal glow-teal">Deserves</span> Iconic<br />
+            <span className="text-accent glow-accent">Music</span>
           </motion.h1>
           
           <motion.p 
@@ -46,7 +46,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <a href="#contact" className="btn-primary">
+            <a href="#contact" className="btn-primary shadow-neon">
               Book a Consultation
             </a>
             <a href="#portfolio" className="btn-secondary">
@@ -62,12 +62,12 @@ const HeroSection = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <div className="aspect-square rounded-2xl bg-gradient-to-br from-teal/80 to-accent-purple/80 shadow-xl overflow-hidden p-px">
+            <div className="aspect-square rounded-2xl bg-gradient-to-br from-teal to-accent shadow-xl overflow-hidden p-px artistic-border">
               <div className="w-full h-full rounded-2xl glass-dark overflow-hidden flex items-center justify-center">
                 <div className="relative w-full h-full">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-32 h-32 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center">
-                      <div className="w-24 h-24 rounded-full bg-teal flex items-center justify-center animate-pulse-gentle">
+                      <div className="w-24 h-24 rounded-full bg-teal flex items-center justify-center animate-pulse-gentle shadow-neon">
                         <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
                           <polygon points="5 3 19 12 5 21 5 3"></polygon>
                         </svg>
@@ -94,18 +94,18 @@ const HeroSection = () => {
               </div>
             </div>
             
-            <div className="absolute -bottom-6 -right-6 -z-10 w-full h-full rounded-2xl bg-gradient-to-br from-teal/30 to-accent-purple/30 blur-xl"></div>
+            <div className="absolute -bottom-6 -right-6 -z-10 w-full h-full rounded-2xl bg-gradient-to-br from-teal/50 to-accent/50 blur-xl"></div>
           </motion.div>
           
           <motion.div
-            className="absolute top-1/4 -right-10 md:-right-20 w-24 h-24 rounded-full bg-accent-pink/20 backdrop-blur-sm animate-float"
+            className="absolute top-1/4 -right-10 md:-right-20 w-24 h-24 rounded-full bg-accent/30 backdrop-blur-sm animate-float"
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.7 }}
             transition={{ duration: 0.7, delay: 0.5 }}
           />
           
           <motion.div
-            className="absolute bottom-1/4 -left-10 md:-left-20 w-20 h-20 rounded-full bg-teal/20 backdrop-blur-sm animate-float animation-delay-1000"
+            className="absolute bottom-1/4 -left-10 md:-left-20 w-20 h-20 rounded-full bg-teal/30 backdrop-blur-sm animate-float animation-delay-1000"
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.7 }}
             transition={{ duration: 0.7, delay: 0.7 }}

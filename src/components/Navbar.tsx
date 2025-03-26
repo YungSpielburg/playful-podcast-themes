@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <motion.nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'py-4 glass' : 'py-6 bg-transparent'
+        scrolled ? 'py-4 glass border-b border-white/5' : 'py-6 bg-transparent'
       }`}
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
@@ -27,19 +27,19 @@ const Navbar = () => {
         <a href="/" className="text-2xl font-display font-bold text-foreground flex items-center gap-2">
           <div className="flex space-x-[2px]">
             <div className="w-1 h-5 bg-teal rounded-full animate-wave-1"></div>
-            <div className="w-1 h-6 bg-teal rounded-full animate-wave-2"></div>
+            <div className="w-1 h-6 bg-accent rounded-full animate-wave-2"></div>
             <div className="w-1 h-4 bg-teal rounded-full animate-wave-3"></div>
-            <div className="w-1 h-7 bg-teal rounded-full animate-wave-4"></div>
+            <div className="w-1 h-7 bg-accent rounded-full animate-wave-4"></div>
             <div className="w-1 h-3 bg-teal rounded-full animate-wave-5"></div>
           </div>
-          <span>Yung Spielburg</span>
+          <span className="glow-teal">Yung Spielburg</span>
         </a>
         
         <div className="hidden md:flex items-center space-x-8">
           <a href="#portfolio" className="navlink">Portfolio</a>
           <a href="#services" className="navlink">Services</a>
           <a href="#about" className="navlink">About</a>
-          <a href="#contact" className="btn-primary">Get in Touch</a>
+          <a href="#contact" className="btn-primary shadow-neon">Get in Touch</a>
         </div>
         
         <button className="md:hidden text-foreground">

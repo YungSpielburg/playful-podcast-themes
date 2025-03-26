@@ -57,7 +57,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-20 md:py-32 bg-secondary/50 relative">
+    <section id="services" className="py-20 md:py-32 bg-secondary/30 relative">
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-background to-transparent"></div>
         <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-background to-transparent"></div>
@@ -72,7 +72,7 @@ const ServicesSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Premium <span className="text-teal">Audio Services</span> for Podcasters
+            Premium <span className="text-accent glow-accent">Audio Services</span> for Podcasters
           </motion.h2>
           <motion.p 
             className="section-subtitle mx-auto"
@@ -93,9 +93,9 @@ const ServicesSection = () => {
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className="glass rounded-xl p-8 flex gap-4"
+              className="glass rounded-xl p-8 flex gap-4 hover:border-accent/20 border border-white/5 transition-all duration-300"
             >
-              <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-teal flex items-center justify-center text-white">
+              <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-teal to-teal-dark flex items-center justify-center text-white shadow-neon">
                 {service.icon}
               </div>
               <div>
@@ -107,7 +107,7 @@ const ServicesSection = () => {
         </div>
         
         <motion.div 
-          className="mt-20 p-8 glass rounded-xl border border-teal/20"
+          className="mt-20 p-8 glass rounded-xl border border-accent/20"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -119,7 +119,7 @@ const ServicesSection = () => {
               <p className="text-muted-foreground">Let's create the perfect sound that captures your podcast's unique personality.</p>
             </div>
             <div className="flex-shrink-0">
-              <a href="#contact" className="btn-primary">
+              <a href="#contact" className="btn-primary shadow-neon">
                 Book a Free Consultation
               </a>
             </div>

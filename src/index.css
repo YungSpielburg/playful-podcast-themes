@@ -7,32 +7,32 @@
 
 @layer base {
   :root {
-    --background: 180 20% 99%;
-    --foreground: 180 5% 10%;
+    --background: 220 15% 16%;
+    --foreground: 0 0% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 180 5% 10%;
+    --card: 220 15% 20%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 180 5% 10%;
+    --popover: 220 15% 20%;
+    --popover-foreground: 0 0% 98%;
 
     --primary: 174 72% 40%;
     --primary-foreground: 174 100% 98%;
 
-    --secondary: 180 10% 97%;
-    --secondary-foreground: 180 5% 10%;
+    --secondary: 220 15% 25%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 180 5% 96%;
-    --muted-foreground: 180 5% 45%;
+    --muted: 220 15% 25%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 174 72% 94%;
-    --accent-foreground: 174 75% 20%;
+    --accent: 320 90% 60%;
+    --accent-foreground: 0 0% 98%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 180 15% 94%;
-    --input: 180 15% 94%;
+    --border: 220 15% 25%;
+    --input: 220 15% 25%;
     --ring: 174 72% 40%;
 
     --radius: 0.75rem;
@@ -58,11 +58,11 @@
 
 @layer components {
   .glass {
-    @apply bg-white/60 backdrop-blur-lg border border-white/20 shadow-glass;
+    @apply bg-background/60 backdrop-blur-lg border border-white/10 shadow-glass;
   }
   
   .glass-dark {
-    @apply bg-black/10 backdrop-blur-lg border border-white/10 shadow-glass;
+    @apply bg-black/20 backdrop-blur-lg border border-white/10 shadow-glass;
   }
   
   .audio-wave {
@@ -94,7 +94,7 @@
   }
   
   .btn-secondary {
-    @apply bg-white/80 backdrop-blur-md text-foreground rounded-full px-6 py-3 font-medium transition-all border border-border hover:bg-white hover:shadow-md;
+    @apply bg-background/80 backdrop-blur-md text-foreground rounded-full px-6 py-3 font-medium transition-all border border-border hover:bg-background hover:shadow-md;
   }
   
   .navlink {
@@ -103,6 +103,18 @@
   
   .client-logo {
     @apply grayscale opacity-70 transition-all duration-300 hover:grayscale-0 hover:opacity-100;
+  }
+  
+  .artistic-border {
+    @apply border-2 border-accent/30 hover:border-accent/60 transition-all duration-300;
+  }
+  
+  .artistic-card {
+    @apply bg-gradient-to-br from-card to-secondary/80 backdrop-blur-sm border border-white/5;
+  }
+  
+  .accent-highlight {
+    @apply text-accent font-semibold;
   }
 }
 
@@ -114,5 +126,13 @@
   .text-stroke {
     -webkit-text-stroke: 1px theme('colors.foreground');
     color: transparent;
+  }
+  
+  .glow-accent {
+    text-shadow: 0 0 8px theme('colors.accent/50');
+  }
+  
+  .glow-teal {
+    text-shadow: 0 0 8px theme('colors.teal/50');
   }
 }
