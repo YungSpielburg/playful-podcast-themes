@@ -1,12 +1,53 @@
-// Update this page (the content is just a fallback if you fail to update the page)
+
+import { useEffect } from 'react';
+import { motion } from 'framer-motion';
+import Navbar from '../components/Navbar';
+import HeroSection from '../components/HeroSection';
+import PortfolioSection from '../components/PortfolioSection';
+import ServicesSection from '../components/ServicesSection';
+import ContactSection from '../components/ContactSection';
+import Footer from '../components/Footer';
 
 const Index = () => {
+  // Smooth scroll implementation
+  useEffect(() => {
+    const handleAnchorClick = (e: MouseEvent) => {
+      const target = e.target as HTMLElement;
+      if (target.tagName === 'A') {
+        const href = target.getAttribute('href');
+        if (href && href.startsWith('#')) {
+          e.preventDefault();
+          const id = href.substring(1);
+          const element = document.getElementById(id);
+          if (element) {
+            window.scrollTo({
+              top: element.offsetTop - 80, // Adjust for navbar height
+              behavior: 'smooth'
+            });
+          }
+        }
+      }
+    };
+
+    document.addEventListener('click', handleAnchorClick);
+    return () => document.removeEventListener('click', handleAnchorClick);
+  }, []);
+
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-100">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4">Welcome to Your Blank App</h1>
-        <p className="text-xl text-gray-600">Start building your amazing project here!</p>
-      </div>
+    <div className="min-h-screen bg-background text-foreground">
+      <Navbar />
+      
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 0.5 }}
+      >
+        <HeroSection />
+        <PortfolioSection />
+        <ServicesSection />
+        <ContactSection />
+        <Footer />
+      </motion.div>
     </div>
   );
 };
