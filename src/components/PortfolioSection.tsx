@@ -21,7 +21,7 @@ const clientLogos = [
     name: 'A16Z', 
     description: 'Theme music for one of technology\'s top VC podcasts',
     highlight: false,
-    audioFile: '/A 16 Z Theme 8.6 (15s B).mp3'
+    audioFile: '/a16z short for website.mp3'
   },
   { 
     name: 'Not Boring', 
