@@ -8,8 +8,7 @@ const podcasts = [
   { 
     name: 'All In Podcast', 
     description: 'Theme music',
-    audioFile: '/Wet Your Beak.mp3',
-    image: '/lovable-uploads/a15485ab-0e65-448c-a8b7-c1b23ffab15d.png'
+    audioFile: '/Wet Your Beak.mp3'
   },
   { 
     name: 'Acquired.fm', 
@@ -138,15 +137,8 @@ const HeroSection = () => {
                 key={podcast.name}
                 className="aspect-square rounded-lg bg-gradient-to-br from-coral to-accent shadow-xl overflow-hidden p-px artistic-border"
               >
-                <div className={`w-full h-full rounded-lg ${podcast.image ? '' : 'glass-dark'} overflow-hidden flex flex-col items-center justify-center relative`}>
-                  {podcast.image && (
-                    <img
-                      src={podcast.image}
-                      alt={podcast.name}
-                      className="absolute inset-0 w-full h-full object-cover"
-                    />
-                  )}
-                  <div className="relative w-full h-full flex flex-col items-center justify-center p-4 z-10">
+                <div className="w-full h-full rounded-lg glass-dark overflow-hidden flex flex-col items-center justify-center">
+                  <div className="relative w-full h-full flex flex-col items-center justify-center p-4">
                     <div 
                       onClick={() => togglePlayPause(index)}
                       className="w-14 h-14 rounded-full bg-coral flex items-center justify-center cursor-pointer hover:scale-105 transition-transform shadow-neon mb-2"
@@ -158,8 +150,8 @@ const HeroSection = () => {
                       )}
                     </div>
                     
-                    <h3 className={`text-white font-medium text-center mt-2 text-sm ${podcast.image ? 'drop-shadow-md' : ''}`}>{podcast.name}</h3>
-                    <p className={`text-white/70 text-xs text-center ${podcast.image ? 'drop-shadow-md' : ''}`}>{podcast.description}</p>
+                    <h3 className="text-white font-medium text-center mt-2 text-sm">{podcast.name}</h3>
+                    <p className="text-white/70 text-xs text-center">{podcast.description}</p>
                     
                     {playingIndex === index && (
                       <div className="mt-auto">
