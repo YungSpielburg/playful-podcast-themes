@@ -36,6 +36,20 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-background text-foreground relative overflow-hidden">
+      {/* Video Background */}
+      <div className="fixed inset-0 w-full h-full -z-10 pointer-events-none">
+        <video 
+          autoPlay 
+          muted 
+          loop 
+          playsInline
+          className="absolute w-full h-full object-cover opacity-20 scale-105 blur-md"
+        >
+          <source src="/studio-broll.mp4" type="video/mp4" />
+        </video>
+        <div className="absolute inset-0 bg-background/90"></div>
+      </div>
+      
       {/* Background noise texture overlay */}
       <div className="fixed inset-0 bg-noise opacity-[0.03] mix-blend-soft-light pointer-events-none"></div>
       

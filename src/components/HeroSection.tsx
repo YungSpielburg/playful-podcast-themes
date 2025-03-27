@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { useState, useRef } from 'react';
 import { Play, Pause } from 'lucide-react';
@@ -85,8 +86,9 @@ const HeroSection = () => {
             transition={{ duration: 0.7, delay: 0.2 }}
           >
             <div className="aspect-square rounded-2xl bg-gradient-to-br from-coral to-accent shadow-xl overflow-hidden p-px artistic-border">
-              <div className="w-full h-full rounded-2xl glass-dark overflow-hidden flex items-center justify-center">
-                <div className="relative w-full h-full">
+              <div className="w-full h-full rounded-2xl glass-dark overflow-hidden flex items-center justify-center relative">
+                <div className="absolute inset-0 bg-black/40"></div>
+                <div className="relative w-full h-full z-10">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-32 h-32 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center">
                       <div 
