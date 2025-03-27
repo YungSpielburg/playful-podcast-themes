@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import AudioPlayer from './AudioPlayer';
@@ -72,7 +73,9 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            Your Podcast's <span className="text-coral glow-coral">Signature</span> <span className="text-accent glow-accent">Sound</span>
+            Give Your Podcast<br />
+            a <span className="text-coral glow-coral">Signature</span><br />
+            <span className="text-accent glow-accent">Sound</span>
           </motion.h1>
           
           <motion.p 
