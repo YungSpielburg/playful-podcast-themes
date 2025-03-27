@@ -24,7 +24,7 @@ const podcasts = [
     name: 'A16Z', 
     description: 'Theme music',
     audioFile: '/A 16 Z Theme 8.6 (15s B).mp3',
-    image: '/a16z image 2.jpg',
+    image: '/a16z-image-2.jpg',
     hideText: true,
     buttonPosition: 'bottom' as const
   },
@@ -32,7 +32,7 @@ const podcasts = [
     name: 'Not Boring', 
     description: 'Outro theme',
     audioFile: '/Not Boring (outro theme).mp3',
-    image: 'Not Boring image.jpg',
+    image: 'Not-Boring-image.jpg',
     hideText: true,
     buttonPosition: 'bottom' as const
   },
