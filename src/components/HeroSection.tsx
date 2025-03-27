@@ -54,12 +54,20 @@ const HeroSection = () => {
           </motion.h1>
           
           <motion.p 
-            className="text-lg md:text-xl mb-8 text-muted-foreground max-w-xl"
+            className="text-lg md:text-xl mb-4 text-muted-foreground max-w-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            I'm a Grammy award-winning producer and songwriter who has produced themes for the world's top podcasts including The All In Podcast, Acquired.fm, and many more. /
+            I'm a Grammy award-winning producer and songwriter who has produced themes for the world's top podcasts including The All In Podcast, Acquired.fm, and many more.
+          </motion.p>
+          
+          <motion.p 
+            className="text-lg md:text-xl mb-8 text-muted-foreground max-w-xl"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.25 }}
+          >
             Let's create the sound that defines your show.
           </motion.p>
           
