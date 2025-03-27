@@ -45,7 +45,7 @@ const Index = () => {
           playsInline
           className="absolute w-full h-full object-cover opacity-20 scale-105 blur-md"
         >
-          <source src="/studio-broll.mp4" type="video/mp4" />
+          <source src="/391242_Sitiing Computer Console Studio_By_RIVERSCOPE_Artlist_HD.mp4" type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-background/90"></div>
       </div>
