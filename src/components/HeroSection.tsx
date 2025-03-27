@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { useState, useRef } from 'react';
 import { Play, Pause } from 'lucide-react';
@@ -20,7 +19,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-[92vh] pt-20 pb-3 flex items-center overflow-hidden">
+    <section className="relative min-h-screen pt-20 pb-10 flex items-center overflow-hidden">
       <audio 
         ref={audioRef} 
         src="/Wet Your Beak.mp3" 
