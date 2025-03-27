@@ -20,7 +20,7 @@ const HeroSection = () => {
   };
 
   return (
-    <section className="relative min-h-[90vh] pt-20 pb-0 flex items-center overflow-hidden">
+    <section className="relative min-h-[95vh] pt-20 pb-5 flex items-center overflow-hidden">
       <audio 
         ref={audioRef} 
         src="/Wet Your Beak.mp3" 

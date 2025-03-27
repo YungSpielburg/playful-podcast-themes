@@ -47,13 +47,13 @@ const PortfolioSection = () => {
   };
 
   return (
-    <section id="portfolio" className="py-0 md:py-4 mt-0 relative overflow-hidden">
+    <section id="portfolio" className="py-2 md:py-8 mt-0 relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-40 left-20 w-64 h-64 bg-coral/10 rounded-full filter blur-3xl"></div>
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent/10 rounded-full filter blur-3xl"></div>
       </div>
       
-      <div className="section-container pt-0 md:pt-8">
+      <div className="section-container pt-2 md:pt-4">
         <div className="text-center max-w-3xl mx-auto">
           <motion.h2 
             className="section-title"
