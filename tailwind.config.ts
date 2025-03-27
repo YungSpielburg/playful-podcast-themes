@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -33,10 +34,10 @@ export default {
 					DEFAULT: '#CFB53B',
 					dark: '#996515',
 				},
-				teal: {
-					light: '#5eead4',
-					DEFAULT: '#14b8a6',
-					dark: '#0f766e',
+				coral: {
+					light: '#FF9A8B',
+					DEFAULT: '#FF6B6B',
+					dark: '#D63447',
 				},
 				accent: {
 					purple: '#c084fc',

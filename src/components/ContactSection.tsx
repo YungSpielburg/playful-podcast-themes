@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useToast } from '@/hooks/use-toast';
@@ -41,7 +40,7 @@ const ContactSection = () => {
   return (
     <section id="contact" className="py-20 md:py-32 relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute -top-40 -right-40 w-80 h-80 bg-teal/5 rounded-full filter blur-3xl"></div>
+        <div className="absolute -top-40 -right-40 w-80 h-80 bg-coral/5 rounded-full filter blur-3xl"></div>
         <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-accent-purple/5 rounded-full filter blur-3xl"></div>
       </div>
       
@@ -54,7 +53,7 @@ const ContactSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Let's Create Your <span className="text-teal">Iconic Sound</span>
+            Let's Create Your <span className="text-coral">Iconic Sound</span>
           </motion.h2>
           <motion.p 
             className="section-subtitle mx-auto"
@@ -76,7 +75,7 @@ const ContactSection = () => {
             transition={{ duration: 0.5, delay: 0.2 }}
           >
             <div className="p-2">
-              <div className="bg-gradient-to-br from-teal/80 to-accent-purple/80 rounded-lg p-8">
+              <div className="bg-gradient-to-br from-coral/80 to-accent-purple/80 rounded-lg p-8">
                 <form onSubmit={handleSubmit} className="space-y-6">
                   <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                     <div>
@@ -138,11 +137,11 @@ const ContactSection = () => {
                     <button
                       type="submit"
                       disabled={isSubmitting}
-                      className="w-full bg-white text-teal font-medium py-3 px-6 rounded-lg transition-all hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white/50 flex items-center justify-center"
+                      className="w-full bg-white text-coral font-medium py-3 px-6 rounded-lg transition-all hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white/50 flex items-center justify-center"
                     >
                       {isSubmitting ? (
                         <>
-                          <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-teal" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                          <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-coral" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                             <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                             <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                           </svg>
@@ -163,7 +162,7 @@ const ContactSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <p className="text-muted-foreground">Prefer to reach out directly? Email me at <a href="mailto:contact@yungspielburg.com" className="text-teal font-medium">contact@yungspielburg.com</a></p>
+            <p className="text-muted-foreground">Prefer to reach out directly? Email me at <a href="mailto:contact@yungspielburg.com" className="text-coral font-medium">contact@yungspielburg.com</a></p>
           </motion.div>
         </div>
       </div>

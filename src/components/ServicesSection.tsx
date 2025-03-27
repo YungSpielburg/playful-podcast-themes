@@ -95,7 +95,7 @@ const ServicesSection = () => {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               className="glass rounded-xl p-8 flex gap-4 hover:border-accent/20 border border-white/5 transition-all duration-300"
             >
-              <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-teal to-teal-dark flex items-center justify-center text-white shadow-neon">
+              <div className="flex-shrink-0 w-12 h-12 rounded-lg bg-gradient-to-br from-coral to-coral-dark flex items-center justify-center text-white shadow-neon">
                 {service.icon}
               </div>
               <div>

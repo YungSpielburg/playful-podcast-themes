@@ -135,4 +135,8 @@
   .glow-gold {
     text-shadow: 0 0 4px theme('colors.gold/30');
   }
+  
+  .glow-coral {
+    text-shadow: 0 0 4px theme('colors.coral/30');
+  }
 }

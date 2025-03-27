@@ -11,11 +11,11 @@ const Footer = () => {
           <div className="mb-6 md:mb-0">
             <div className="flex items-center gap-2">
               <div className="flex space-x-[2px]">
-                <div className="w-1 h-3 bg-teal rounded-full"></div>
-                <div className="w-1 h-4 bg-teal rounded-full"></div>
-                <div className="w-1 h-2 bg-teal rounded-full"></div>
-                <div className="w-1 h-5 bg-teal rounded-full"></div>
-                <div className="w-1 h-3 bg-teal rounded-full"></div>
+                <div className="w-1 h-3 bg-coral rounded-full"></div>
+                <div className="w-1 h-4 bg-coral rounded-full"></div>
+                <div className="w-1 h-2 bg-coral rounded-full"></div>
+                <div className="w-1 h-5 bg-coral rounded-full"></div>
+                <div className="w-1 h-3 bg-coral rounded-full"></div>
               </div>
               <span className="text-lg font-display font-semibold">Yung Spielburg</span>
             </div>
