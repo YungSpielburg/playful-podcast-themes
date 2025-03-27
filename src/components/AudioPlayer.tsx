@@ -68,7 +68,7 @@ const AudioPlayer = ({
           <div className="flex flex-col items-start mb-1"> {/* Reduced margin-bottom */}
             <div
               onClick={handlePlayPause}
-              className="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform shadow-neon bg-white/30 border-2 border-white/40 hover:border-white/70 ml-2 mb-1" // Changed colors to white with opacity
+              className="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform shadow-neon bg-black/30 border-2 border-black/40 hover:border-black/70 ml-2 mb-1" // Changed colors to black with opacity
             >
               {isPlaying ? (
                 <Pause className="text-white" size={16} />
