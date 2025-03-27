@@ -27,18 +27,18 @@ const AudioPlayer = ({ name, description, audioFile, image, isPlaying, onToggleP
   };
 
   return (
-    <div className="aspect-square rounded-lg bg-gradient-to-br from-coral to-accent shadow-xl overflow-hidden p-px artistic-border">
+    <div
+      className="aspect-square rounded-lg shadow-xl overflow-hidden p-px artistic-border"
+      style={{
+        backgroundImage: image ? `url(${image})` : 'linear-gradient(to bottom right, #ff6f61, #ffcc33)', // Fallback to gradient if no image
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+      }}
+    >
       <div className="w-full h-full rounded-lg glass-dark overflow-hidden flex flex-col items-center justify-center">
         <div className="relative w-full h-full flex flex-col items-center justify-center p-4">
           <audio ref={audioRef} src={audioFile} />
-          {image && (
-            <img 
-              src={image} 
-              alt={`${name} theme`}
-              className="w-16 h-16 object-cover rounded-full mb-2"
-            />
-          )}
-          <div 
+          <div
             onClick={handlePlayPause}
             className="w-14 h-14 rounded-full bg-coral flex items-center justify-center cursor-pointer hover:scale-105 transition-transform shadow-neon mb-2"
           >
