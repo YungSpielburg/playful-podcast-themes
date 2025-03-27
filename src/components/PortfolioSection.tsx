@@ -1,5 +1,5 @@
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Play, Pause } from 'lucide-react';
 
@@ -46,6 +46,37 @@ const clientLogos = [
 const PortfolioSection = () => {
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
   const audioRefs = useRef<(HTMLAudioElement | null)[]>(Array(clientLogos.length).fill(null));
+  const [audioLoaded, setAudioLoaded] = useState<boolean[]>(Array(clientLogos.length).fill(false));
+
+  // Initialize audio elements
+  useEffect(() => {
+    // Create and preload audio elements
+    clientLogos.forEach((client, index) => {
+      const audio = new Audio(client.audioFile);
+      audio.preload = 'auto';
+      audio.addEventListener('canplaythrough', () => {
+        const newLoadedState = [...audioLoaded];
+        newLoadedState[index] = true;
+        setAudioLoaded(newLoadedState);
+      });
+      audio.addEventListener('ended', () => {
+        if (playingIndex === index) {
+          setPlayingIndex(null);
+        }
+      });
+      audioRefs.current[index] = audio;
+    });
+
+    // Cleanup on unmount
+    return () => {
+      audioRefs.current.forEach(audio => {
+        if (audio) {
+          audio.pause();
+          audio.src = '';
+        }
+      });
+    };
+  }, []);
 
   const fadeInUpVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -61,29 +92,44 @@ const PortfolioSection = () => {
 
   const togglePlayPause = (index: number) => {
     const audioElement = audioRefs.current[index];
-    if (!audioElement) return;
-
-    if (playingIndex === index) {
-      // Pause the currently playing audio
-      audioElement.pause();
-      setPlayingIndex(null);
-    } else {
-      // Pause any currently playing audio
-      if (playingIndex !== null && audioRefs.current[playingIndex]) {
-        audioRefs.current[playingIndex]?.pause();
-      }
-      
-      // Play the selected audio
-      audioElement.play().catch(error => {
-        console.error("Error playing audio:", error);
-      });
-      setPlayingIndex(index);
+    if (!audioElement) {
+      console.error('Audio element not found for index:', index);
+      return;
     }
-  };
 
-  // Handle audio ended event
-  const handleAudioEnded = () => {
-    setPlayingIndex(null);
+    try {
+      if (playingIndex === index) {
+        // Pause the currently playing audio
+        audioElement.pause();
+        setPlayingIndex(null);
+        console.log('Paused audio at index:', index);
+      } else {
+        // Pause any currently playing audio
+        if (playingIndex !== null && audioRefs.current[playingIndex]) {
+          audioRefs.current[playingIndex]?.pause();
+        }
+        
+        // Play the selected audio
+        const playPromise = audioElement.play();
+        
+        if (playPromise !== undefined) {
+          playPromise
+            .then(() => {
+              console.log('Audio started playing at index:', index);
+              setPlayingIndex(index);
+            })
+            .catch(error => {
+              console.error("Error playing audio:", error);
+              // Try to play again with user interaction already happened
+              if (error.name === 'NotAllowedError') {
+                console.log('Audio playback requires user interaction first');
+              }
+            });
+        }
+      }
+    } catch (error) {
+      console.error('Error in togglePlayPause:', error);
+    }
   };
 
   return (
@@ -92,16 +138,6 @@ const PortfolioSection = () => {
         <div className="absolute top-40 left-20 w-64 h-64 bg-coral/10 rounded-full filter blur-3xl"></div>
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent/10 rounded-full filter blur-3xl"></div>
       </div>
-      
-      {/* Create audio elements for each client */}
-      {clientLogos.map((client, index) => (
-        <audio 
-          key={`audio-${index}`}
-          ref={el => audioRefs.current[index] = el}
-          src={client.audioFile}
-          onEnded={handleAudioEnded}
-        />
-      ))}
       
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto">
