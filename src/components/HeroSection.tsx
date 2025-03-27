@@ -32,7 +32,7 @@ const podcasts = [
     name: 'Not Boring', 
     description: 'Outro theme',
     audioFile: '/Not Boring (outro theme).mp3',
-    image: 'Not-Boring-image.jpg',
+    image: 'not-boring-image.jpg',
     hideText: true,
     buttonPosition: 'bottom' as const
   },
