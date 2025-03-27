@@ -1,30 +1,69 @@
+
 import { motion } from 'framer-motion';
 import { useState, useRef } from 'react';
 import { Play, Pause } from 'lucide-react';
 
-const HeroSection = () => {
-  const [isPlaying, setIsPlaying] = useState(false);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+// Podcast data structure
+const podcasts = [
+  { 
+    name: 'All In Podcast', 
+    description: 'Theme music',
+    audioFile: '/Wet Your Beak.mp3'
+  },
+  { 
+    name: 'Acquired.fm', 
+    description: 'Custom intro',
+    audioFile: '/Who Got The Truth.mp3'
+  },
+  { 
+    name: 'A16Z', 
+    description: 'Theme music',
+    audioFile: '/A 16 Z Theme 8.6 (15s B).mp3'
+  },
+  { 
+    name: 'Not Boring', 
+    description: 'Outro theme',
+    audioFile: '/Not Boring (outro theme).mp3'
+  },
+];
 
-  const togglePlayPause = () => {
-    if (!audioRef.current) return;
-    
-    if (isPlaying) {
-      audioRef.current.pause();
+const HeroSection = () => {
+  const [playingIndex, setPlayingIndex] = useState<number | null>(null);
+  const audioRefs = useRef<(HTMLAudioElement | null)[]>(Array(podcasts.length).fill(null));
+
+  const togglePlayPause = (index: number) => {
+    const audioElement = audioRefs.current[index];
+    if (!audioElement) return;
+
+    if (playingIndex === index) {
+      // Pause the currently playing audio
+      audioElement.pause();
+      setPlayingIndex(null);
     } else {
-      audioRef.current.play();
+      // Pause any currently playing audio
+      if (playingIndex !== null && audioRefs.current[playingIndex]) {
+        audioRefs.current[playingIndex]?.pause();
+      }
+      
+      // Play the selected audio
+      audioElement.play().catch(error => {
+        console.error("Error playing audio:", error);
+      });
+      setPlayingIndex(index);
     }
-    
-    setIsPlaying(!isPlaying);
   };
 
   return (
     <section className="relative min-h-screen pt-20 pb-10 flex items-center overflow-hidden">
-      <audio 
-        ref={audioRef} 
-        src="/Wet Your Beak.mp3" 
-        onEnded={() => setIsPlaying(false)}
-      />
+      {/* Create audio elements for each podcast */}
+      {podcasts.map((podcast, index) => (
+        <audio 
+          key={`audio-${index}`}
+          ref={el => audioRefs.current[index] = el}
+          src={podcast.audioFile}
+          onEnded={() => setPlayingIndex(null)}
+        />
+      ))}
       
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 right-0 w-96 h-96 bg-coral/20 rounded-full filter blur-3xl"></div>
@@ -88,61 +127,47 @@ const HeroSection = () => {
         
         <div className="flex-1 relative">
           <motion.div
-            className="relative z-10 w-full max-w-md mx-auto"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={{ opacity: 1, scale: 1 }}
+            className="grid grid-cols-2 gap-4 w-full max-w-md mx-auto"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
           >
-            <div className="aspect-square rounded-2xl bg-gradient-to-br from-coral to-accent shadow-xl overflow-hidden p-px artistic-border">
-              <div className="w-full h-full rounded-2xl glass-dark overflow-hidden flex items-center justify-center">
-                <div className="relative w-full h-full">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-32 h-32 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center">
-                      <div 
-                        onClick={togglePlayPause}
-                        className="w-24 h-24 rounded-full bg-coral flex items-center justify-center cursor-pointer hover:scale-105 transition-transform shadow-neon"
-                      >
-                        {isPlaying ? (
-                          <Pause className="text-white" size={40} />
-                        ) : (
-                          <Play className="text-white" size={40} />
-                        )}
-                      </div>
+            {podcasts.map((podcast, index) => (
+              <div 
+                key={podcast.name}
+                className="aspect-square rounded-lg bg-gradient-to-br from-coral to-accent shadow-xl overflow-hidden p-px artistic-border"
+              >
+                <div className="w-full h-full rounded-lg glass-dark overflow-hidden flex flex-col items-center justify-center">
+                  <div className="relative w-full h-full flex flex-col items-center justify-center p-4">
+                    <div 
+                      onClick={() => togglePlayPause(index)}
+                      className="w-14 h-14 rounded-full bg-coral flex items-center justify-center cursor-pointer hover:scale-105 transition-transform shadow-neon mb-2"
+                    >
+                      {playingIndex === index ? (
+                        <Pause className="text-white" size={20} />
+                      ) : (
+                        <Play className="text-white" size={20} />
+                      )}
                     </div>
-                  </div>
-                  
-                  <div className="absolute bottom-6 left-0 right-0 px-6">
-                    <div className="glass-dark rounded-xl p-4 flex items-center gap-4">
-                      <div className="audio-wave">
-                        {isPlaying ? (
-                          <>
-                            <div className="audio-wave-bar h-4 animate-wave-1"></div>
-                            <div className="audio-wave-bar h-5 animate-wave-2"></div>
-                            <div className="audio-wave-bar h-3 animate-wave-3"></div>
-                            <div className="audio-wave-bar h-6 animate-wave-4"></div>
-                            <div className="audio-wave-bar h-2 animate-wave-5"></div>
-                          </>
-                        ) : (
-                          <>
-                            <div className="audio-wave-bar h-2"></div>
-                            <div className="audio-wave-bar h-2"></div>
-                            <div className="audio-wave-bar h-2"></div>
-                            <div className="audio-wave-bar h-2"></div>
-                            <div className="audio-wave-bar h-2"></div>
-                          </>
-                        )}
+                    
+                    <h3 className="text-white font-medium text-center mt-2 text-sm">{podcast.name}</h3>
+                    <p className="text-white/70 text-xs text-center">{podcast.description}</p>
+                    
+                    {playingIndex === index && (
+                      <div className="mt-auto">
+                        <div className="audio-wave">
+                          <div className="audio-wave-bar h-2 animate-wave-1"></div>
+                          <div className="audio-wave-bar h-3 animate-wave-2"></div>
+                          <div className="audio-wave-bar h-1 animate-wave-3"></div>
+                          <div className="audio-wave-bar h-4 animate-wave-4"></div>
+                          <div className="audio-wave-bar h-2 animate-wave-5"></div>
+                        </div>
                       </div>
-                      <div className="flex-1">
-                        <h4 className="text-white font-medium text-sm">Wet Your Beak</h4>
-                        <p className="text-white/70 text-xs">Produced by Yung Spielburg</p>
-                      </div>
-                    </div>
+                    )}
                   </div>
                 </div>
               </div>
-            </div>
-            
-            <div className="absolute -bottom-6 -right-6 -z-10 w-full h-full rounded-2xl bg-gradient-to-br from-coral/50 to-accent/50 blur-xl"></div>
+            ))}
           </motion.div>
           
           <motion.div
