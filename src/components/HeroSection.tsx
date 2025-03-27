@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { useState, useRef } from 'react';
 import { Play, Pause } from 'lucide-react';
@@ -8,7 +7,8 @@ const podcasts = [
   { 
     name: 'All In Podcast', 
     description: 'Theme music',
-    audioFile: '/Wet Your Beak.mp3'
+    audioFile: '/Wet Your Beak.mp3',
+    image: '/ALL IN IMAGE.jpg' // Add image property for All In Podcast
   },
   { 
     name: 'Acquired.fm', 
@@ -36,16 +36,12 @@ const HeroSection = () => {
     if (!audioElement) return;
 
     if (playingIndex === index) {
-      // Pause the currently playing audio
       audioElement.pause();
       setPlayingIndex(null);
     } else {
-      // Pause any currently playing audio
       if (playingIndex !== null && audioRefs.current[playingIndex]) {
         audioRefs.current[playingIndex]?.pause();
       }
-      
-      // Play the selected audio
       audioElement.play().catch(error => {
         console.error("Error playing audio:", error);
       });
@@ -55,7 +51,7 @@ const HeroSection = () => {
 
   return (
     <section className="relative min-h-screen pt-20 pb-10 flex items-center overflow-hidden">
-      {/* Create audio elements for each podcast */}
+      {/* Audio elements */}
       {podcasts.map((podcast, index) => (
         <audio 
           key={`audio-${index}`}
@@ -139,6 +135,13 @@ const HeroSection = () => {
               >
                 <div className="w-full h-full rounded-lg glass-dark overflow-hidden flex flex-col items-center justify-center">
                   <div className="relative w-full h-full flex flex-col items-center justify-center p-4">
+                    {podcast.image && (
+                      <img 
+                        src={podcast.image} 
+                        alt={`${podcast.name} theme`}
+                        className="w-16 h-16 object-cover rounded-full mb-2"
+                      />
+                    )}
                     <div 
                       onClick={() => togglePlayPause(index)}
                       className="w-14 h-14 rounded-full bg-coral flex items-center justify-center cursor-pointer hover:scale-105 transition-transform shadow-neon mb-2"
