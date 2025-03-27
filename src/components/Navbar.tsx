@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <motion.nav 
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'py-4 glass border-b border-charcoal/5' : 'py-6 bg-transparent'
+        scrolled ? 'py-4 glass border-b border-white/5' : 'py-6 bg-transparent'
       }`}
       initial={{ y: -100, opacity: 0 }}
       animate={{ y: 0, opacity: 1 }}
