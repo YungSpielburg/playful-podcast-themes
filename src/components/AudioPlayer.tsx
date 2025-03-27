@@ -1,3 +1,4 @@
+
 import { useState, useRef } from 'react';
 import { Play, Pause } from 'lucide-react';
 
@@ -67,12 +68,12 @@ const AudioPlayer = ({
           <div className="flex flex-col items-start mb-1"> {/* Reduced margin-bottom */}
             <div
               onClick={handlePlayPause}
-              className="w-14 h-14 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform shadow-neon bg-transparent border-2 border-coral/50 hover:border-coral ml-2 mb-1" // Reduced margin-bottom
+              className="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform shadow-neon bg-transparent border-2 border-coral/50 hover:border-coral ml-2 mb-1" // Changed from w-14 h-14 to w-10 h-10
             >
               {isPlaying ? (
-                <Pause className="text-white" size={20} />
+                <Pause className="text-white" size={16} /> // Changed from size={20} to size={16}
               ) : (
-                <Play className="text-white" size={20} />
+                <Play className="text-white" size={16} /> // Changed from size={20} to size={16}
               )}
             </div>
             
