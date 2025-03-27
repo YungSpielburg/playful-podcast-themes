@@ -36,13 +36,19 @@ const AudioPlayer = ({ name, description, audioFile, image, isPlaying, onToggleP
       className="aspect-square rounded-lg shadow-xl overflow-hidden p-px artistic-border"
       style={{
         backgroundImage: image ? `url(${image})` : 'linear-gradient(to bottom right, #ff6f61, #ffcc33)',
-        backgroundSize: '100% 100%', // Stretch to fit exactly
+        backgroundSize: '100% 100%',
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
-        imageRendering: 'auto', // Optimize rendering for sharpness
+        imageRendering: 'auto',
       }}
     >
-      <div className="w-full h-full rounded-lg glass-dark overflow-hidden flex flex-col items-center justify-center">
+      <div
+        className="w-full h-full rounded-lg overflow-hidden flex flex-col items-center justify-center"
+        style={{
+          background: 'rgba(0, 0, 0, 0.5)', // Semi-transparent black overlay
+          backdropFilter: 'none', // Explicitly disable blur
+        }}
+      >
         <div className="relative w-full h-full flex flex-col items-center justify-center p-4">
           <audio ref={audioRef} src={audioFile} />
           <div
