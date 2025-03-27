@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -6,32 +7,32 @@
 
 @layer base {
   :root {
-    --background: 0 0% 95%;
-    --foreground: 220 15% 13%;
+    --background: 220 15% 13%;
+    --foreground: 0 0% 95%;
 
-    --card: 0 0% 98%;
-    --card-foreground: 220 15% 13%;
+    --card: 220 15% 18%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 0 0% 98%;
-    --popover-foreground: 220 15% 13%;
+    --popover: 220 15% 18%;
+    --popover-foreground: 0 0% 95%;
 
     --primary: 43 57% 52%;
-    --primary-foreground: 220 15% 13%;
+    --primary-foreground: 0 0% 10%;
 
-    --secondary: 0 0% 90%;
-    --secondary-foreground: 220 15% 13%;
+    --secondary: 220 15% 22%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 0 0% 90%;
-    --muted-foreground: 220 15% 30%;
+    --muted: 220 15% 22%;
+    --muted-foreground: 0 0% 70%;
 
     --accent: 43 57% 52%;
-    --accent-foreground: 220 15% 13%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 0 0% 85%;
-    --input: 0 0% 85%;
+    --border: 220 15% 22%;
+    --input: 220 15% 22%;
     --ring: 43 57% 52%;
 
     --radius: 0.75rem;
@@ -57,11 +58,11 @@
 
 @layer components {
   .glass {
-    @apply bg-background/60 backdrop-blur-lg border border-charcoal/10 shadow-glass;
+    @apply bg-background/60 backdrop-blur-lg border border-white/10 shadow-glass;
   }
   
   .glass-dark {
-    @apply bg-charcoal/20 backdrop-blur-lg border border-charcoal/10 shadow-glass;
+    @apply bg-black/20 backdrop-blur-lg border border-white/10 shadow-glass;
   }
   
   .audio-wave {
@@ -89,11 +90,11 @@
   }
   
   .btn-primary {
-    @apply bg-gold text-charcoal rounded-full px-6 py-3 font-medium transition-all hover:bg-gold-dark hover:shadow-md;
+    @apply bg-gold text-black rounded-full px-6 py-3 font-medium transition-all hover:bg-gold-dark hover:shadow-md;
   }
   
   .btn-secondary {
-    @apply bg-charcoal/10 backdrop-blur-md text-foreground rounded-full px-6 py-3 font-medium transition-all border border-border hover:bg-charcoal/5 hover:shadow-md;
+    @apply bg-background/80 backdrop-blur-md text-foreground rounded-full px-6 py-3 font-medium transition-all border border-border hover:bg-background hover:shadow-md;
   }
   
   .navlink {
@@ -109,7 +110,7 @@
   }
   
   .artistic-card {
-    @apply bg-gradient-to-br from-card to-secondary/80 backdrop-blur-sm border border-charcoal/5;
+    @apply bg-gradient-to-br from-card to-secondary/80 backdrop-blur-sm border border-white/5;
   }
   
   .accent-highlight {

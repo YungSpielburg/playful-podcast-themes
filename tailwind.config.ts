@@ -29,11 +29,6 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
-				charcoal: {
-					light: '#565A5F',
-					DEFAULT: '#363A3F',
-					dark: '#242A30',
-				},
 				gold: {
 					light: '#D4AF37',
 					DEFAULT: '#CFB53B',
