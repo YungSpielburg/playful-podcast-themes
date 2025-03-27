@@ -39,9 +39,12 @@ const Index = () => {
       {/* Background noise texture overlay */}
       <div className="fixed inset-0 bg-noise opacity-[0.03] mix-blend-soft-light pointer-events-none"></div>
       
-      {/* Gradient orbs */}
-      <div className="fixed -top-[30%] -right-[20%] w-[70%] h-[70%] bg-gradient-radial from-gold/10 to-transparent opacity-20 blur-3xl pointer-events-none"></div>
-      <div className="fixed -bottom-[30%] -left-[20%] w-[70%] h-[70%] bg-gradient-radial from-gold/10 to-transparent opacity-20 blur-3xl pointer-events-none"></div>
+      {/* Red carpet inspired subtle gradient background */}
+      <div className="fixed inset-0 bg-gradient-to-b from-black via-background to-black opacity-70 pointer-events-none"></div>
+      
+      {/* Gold accents */}
+      <div className="fixed -top-[30%] -right-[20%] w-[70%] h-[70%] bg-gradient-radial from-gold/5 to-transparent opacity-30 blur-3xl pointer-events-none"></div>
+      <div className="fixed -bottom-[30%] -left-[20%] w-[70%] h-[70%] bg-gradient-radial from-gold/5 to-transparent opacity-30 blur-3xl pointer-events-none"></div>
       
       <Navbar />
       
@@ -58,10 +61,12 @@ const Index = () => {
         <Footer />
       </motion.div>
       
-      {/* Decorative Elements */}
-      <div className="fixed top-1/4 right-10 w-2 h-2 rounded-full bg-gold/50 animate-sparkle-1 opacity-50"></div>
-      <div className="fixed top-1/3 left-20 w-3 h-3 rounded-full bg-gold/50 animate-sparkle-2 opacity-50"></div>
-      <div className="fixed bottom-1/4 right-20 w-2 h-2 rounded-full bg-gold/50 animate-sparkle-3 opacity-50"></div>
+      {/* Gold star decorative elements */}
+      <div className="fixed top-1/4 right-10 w-1 h-1 rounded-full bg-gold animate-sparkle-1 opacity-80"></div>
+      <div className="fixed top-1/3 left-20 w-2 h-2 rounded-full bg-gold animate-sparkle-2 opacity-80"></div>
+      <div className="fixed bottom-1/4 right-20 w-1.5 h-1.5 rounded-full bg-gold animate-sparkle-3 opacity-80"></div>
+      <div className="fixed bottom-1/3 left-10 w-1 h-1 rounded-full bg-gold animate-sparkle-1 opacity-80 animation-delay-1000"></div>
+      <div className="fixed top-2/3 right-1/4 w-1 h-1 rounded-full bg-gold animate-sparkle-2 opacity-80 animation-delay-500"></div>
     </div>
   );
 };
