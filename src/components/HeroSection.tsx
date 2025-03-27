@@ -23,7 +23,7 @@ const HeroSection = () => {
     <section className="relative min-h-screen pt-20 flex items-center overflow-hidden">
       <audio 
         ref={audioRef} 
-        src="/sample-podcast-theme.mp3" 
+        src="/Wet Your Beak.mp3" 
         onEnded={() => setIsPlaying(false)}
       />
       
@@ -125,7 +125,7 @@ const HeroSection = () => {
                         )}
                       </div>
                       <div className="flex-1">
-                        <h4 className="text-white font-medium text-sm">The All In Podcast Theme</h4>
+                        <h4 className="text-white font-medium text-sm">Wet Your Beak</h4>
                         <p className="text-white/70 text-xs">Produced by Yung Spielburg</p>
                       </div>
                     </div>
