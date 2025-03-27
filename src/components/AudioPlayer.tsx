@@ -26,13 +26,19 @@ const AudioPlayer = ({ name, description, audioFile, image, isPlaying, onToggleP
     }
   };
 
+  // Log the image path for debugging
+  if (image) {
+    console.log(`Attempting to load image: ${image}`);
+  }
+
   return (
     <div
       className="aspect-square rounded-lg shadow-xl overflow-hidden p-px artistic-border"
       style={{
-        backgroundImage: image ? `url(${image})` : 'linear-gradient(to bottom right, #ff6f61, #ffcc33)', // Fallback to gradient if no image
+        backgroundImage: image ? `url(${image})` : 'linear-gradient(to bottom right, #ff6f61, #ffcc33)',
         backgroundSize: 'cover',
         backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat', // Ensure the image doesn't repeat
       }}
     >
       <div className="w-full h-full rounded-lg glass-dark overflow-hidden flex flex-col items-center justify-center">
@@ -48,8 +54,8 @@ const AudioPlayer = ({ name, description, audioFile, image, isPlaying, onToggleP
               <Play className="text-white" size={20} />
             )}
           </div>
-          <h3 className="text-white font-medium text-center mt-2 text-sm">{name}</h3>
-          <p className="text-white/70 text-xs text-center">{description}</p>
+          <h3 className="text-white font-medium text-center mt-2 text-sm drop-shadow-md">{name}</h3>
+          <p className="text-white/90 text-xs text-center drop-shadow-md">{description}</p>
           {isPlaying && (
             <div className="mt-auto">
               <div className="audio-wave">
