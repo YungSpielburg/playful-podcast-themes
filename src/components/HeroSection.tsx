@@ -15,7 +15,10 @@ const podcasts = [
   { 
     name: 'Acquired.fm', 
     description: 'Custom intro',
-    audioFile: '/Who Got The Truth.mp3'
+    audioFile: '/Who Got The Truth.mp3',
+    image: '/acquired-podcast-jpg.jpeg',
+    hideText: true,
+    buttonPosition: 'bottom' as const
   },
   { 
     name: 'A16Z', 
