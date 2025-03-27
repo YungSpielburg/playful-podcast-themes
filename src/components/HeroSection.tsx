@@ -1,8 +1,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
-import AudioPlayer from './AudioPlayer'; // Adjust the path based on your folder structure
+import AudioPlayer from './AudioPlayer';
 
-// Podcast data structure
 const podcasts = [
   { 
     name: 'All In Podcast', 
@@ -102,7 +101,7 @@ const HeroSection = () => {
         
         <div className="flex-1 relative">
           <motion.div
-            className="grid grid-cols-2 gap-4 w-full max-w-md mx-auto"
+            className="grid grid-cols-2 gap-4 w-full max-w-[400px] mx-auto" // Adjusted max-w to 400px
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
