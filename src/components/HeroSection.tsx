@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import AudioPlayer from './AudioPlayer';
@@ -7,7 +8,9 @@ const podcasts = [
     name: 'All In Podcast', 
     description: 'Theme music',
     audioFile: '/Wet Your Beak.mp3',
-    image: '/all-in-image.jpg'
+    image: '/all-in-image.jpg',
+    hideText: true,
+    buttonPosition: 'bottom' as const
   },
   { 
     name: 'Acquired.fm', 
@@ -101,7 +104,7 @@ const HeroSection = () => {
         
         <div className="flex-1 relative">
           <motion.div
-            className="grid grid-cols-2 gap-4 w-full max-w-[400px] mx-auto" // Adjusted max-w to 400px
+            className="grid grid-cols-2 gap-4 w-full max-w-[400px] mx-auto"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}
@@ -115,6 +118,8 @@ const HeroSection = () => {
                 image={podcast.image}
                 isPlaying={playingIndex === index}
                 onTogglePlay={() => togglePlayPause(index)}
+                hideText={podcast.hideText}
+                buttonPosition={podcast.buttonPosition}
               />
             ))}
           </motion.div>

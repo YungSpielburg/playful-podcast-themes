@@ -1,3 +1,4 @@
+
 import { useState, useRef } from 'react';
 import { Play, Pause } from 'lucide-react';
 
@@ -8,9 +9,20 @@ interface AudioPlayerProps {
   image?: string;
   isPlaying: boolean;
   onTogglePlay: () => void;
+  hideText?: boolean;
+  buttonPosition?: 'center' | 'bottom';
 }
 
-const AudioPlayer = ({ name, description, audioFile, image, isPlaying, onTogglePlay }: AudioPlayerProps) => {
+const AudioPlayer = ({ 
+  name, 
+  description, 
+  audioFile, 
+  image, 
+  isPlaying, 
+  onTogglePlay,
+  hideText = false,
+  buttonPosition = 'center'
+}: AudioPlayerProps) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   const handlePlayPause = () => {
@@ -49,11 +61,11 @@ const AudioPlayer = ({ name, description, audioFile, image, isPlaying, onToggleP
           backdropFilter: 'none',
         }}
       >
-        <div className="relative w-full h-full flex flex-col items-center justify-center p-4 gap-1">
+        <div className={`relative w-full h-full flex flex-col items-center ${buttonPosition === 'bottom' ? 'justify-end pb-4' : 'justify-center'} p-4 gap-1`}>
           <audio ref={audioRef} src={audioFile} />
           <div
             onClick={handlePlayPause}
-            className="w-14 h-14 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform shadow-neon mb-2 bg-transparent border-2 border-coral/50 hover:border-coral" // Updated styling
+            className="w-14 h-14 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform shadow-neon mb-2 bg-transparent border-2 border-coral/50 hover:border-coral"
           >
             {isPlaying ? (
               <Pause className="text-white" size={20} />
@@ -61,8 +73,14 @@ const AudioPlayer = ({ name, description, audioFile, image, isPlaying, onToggleP
               <Play className="text-white" size={20} />
             )}
           </div>
-          <h3 className="text-white font-semibold text-center text-sm drop-shadow-lg">{name}</h3>
-          <p className="text-white/90 text-xs text-center drop-shadow-lg">{description}</p>
+          
+          {!hideText && (
+            <>
+              <h3 className="text-white font-semibold text-center text-sm drop-shadow-lg">{name}</h3>
+              <p className="text-white/90 text-xs text-center drop-shadow-lg">{description}</p>
+            </>
+          )}
+          
           {isPlaying && (
             <div className="mt-2">
               <div className="audio-wave">
