@@ -39,7 +39,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5 }}
           >
-            #1 Podcast Theme Producer Worldwide
+            #1 Podcast Theme Producer
           </motion.span>
           
           <motion.h1 
