@@ -7,13 +7,13 @@ import { Play, Pause } from 'lucide-react';
 const clientLogos = [
   { 
     name: 'All In Podcast', 
-    description: 'My theme rose with the show to become a top 10 podcast in the world',
+    description: 'The theme helped them become a top 10 podcast worldwide',
     highlight: true,
     audioFile: '/Wet Your Beak.mp3'
   },
   { 
     name: 'Acquired.fm', 
-    description: 'Ben and David wanted a song that reflected their show's ethos, but wasn't too on the nose. They are the #1 tech podcast in the world.',
+    description: 'Custom intro music for their tech acquisition analysis',
     highlight: false,
     audioFile: '/Who Got The Truth.mp3'
   },
@@ -25,19 +25,19 @@ const clientLogos = [
   },
   { 
     name: 'Not Boring', 
-    description: 'Packy McCormick is all about optomism ;',
+    description: 'Distinctive sound created for Packy McCormick\'s business analysis',
     highlight: false,
     audioFile: '/Not Boring (outro theme).mp3'
   },
   { 
     name: 'Balaji Srinivasan', 
-    description: 'Futuristic news style theme for the renowned tech philosopher',
+    description: 'Unique audio identity for the renowned tech philosopher',
     highlight: false,
     audioFile: '/the network state for website.mp3'
   },
   { 
     name: 'ConsumerVC', 
-    description: 'A lighthearted but undeniably unique theme for Mike Gelb's podcast on Consumer Facing VC',
+    description: 'Crafted the perfect sound for consumer investment insights',
     highlight: false,
     audioFile: '/VC Consumer Bumper 1.0.wav'
   },
