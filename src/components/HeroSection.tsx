@@ -9,7 +9,7 @@ const podcasts = [
     name: 'All In Podcast', 
     description: 'Theme music',
     audioFile: '/Wet Your Beak.mp3',
-    image: '/lovable-uploads/8ffd76e8-ec0b-4730-a936-e41ceb52ce67.png'
+    image: '/lovable-uploads/a15485ab-0e65-448c-a8b7-c1b23ffab15d.png'
   },
   { 
     name: 'Acquired.fm', 
