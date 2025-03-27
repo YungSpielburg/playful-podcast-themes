@@ -98,7 +98,7 @@ const ServicesSection = () => {
             </div>
             <div className="flex-shrink-0">
               <a href="#contact" className="btn-primary shadow-neon">
-                Book a Free Consultation
+                Connect With Me
               </a>
             </div>
           </div>
