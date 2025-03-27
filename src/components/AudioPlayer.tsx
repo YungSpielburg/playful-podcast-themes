@@ -61,13 +61,13 @@ const AudioPlayer = ({
           backdropFilter: 'none',
         }}
       >
-        <div className={`relative w-full h-full flex flex-col items-start ${buttonPosition === 'bottom' ? 'justify-end pb-1' : 'justify-center'} p-4`}>
+        <div className={`relative w-full h-full flex flex-col items-start ${buttonPosition === 'bottom' ? 'justify-end pb-2' : 'justify-center'} p-4`}>
           <audio ref={audioRef} src={audioFile} />
           
-          <div className="flex flex-col items-start"> {/* Removed mb-1 */}
+          <div className="flex flex-col items-start mb-1"> {/* Reduced margin-bottom */}
             <div
               onClick={handlePlayPause}
-              className="w-14 h-14 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform shadow-neon bg-transparent border-2 border-coral/50 hover:border-coral ml-2" // Removed mb-1
+              className="w-14 h-14 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform shadow-neon bg-transparent border-2 border-coral/50 hover:border-coral ml-2 mb-1" // Reduced margin-bottom
             >
               {isPlaying ? (
                 <Pause className="text-white" size={20} />
@@ -85,7 +85,7 @@ const AudioPlayer = ({
           </div>
           
           {isPlaying && (
-            <div className="ml-2"> {/* Removed mb-1 */}
+            <div className="ml-2 mb-1"> {/* Added margin-bottom to wave animation */}
               <div className="audio-wave">
                 <div className="audio-wave-bar h-2 animate-wave-1"></div>
                 <div className="audio-wave-bar h-3 animate-wave-2"></div>
