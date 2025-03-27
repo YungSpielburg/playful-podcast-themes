@@ -1,4 +1,3 @@
-
 import { useState, useRef } from 'react';
 import { Play, Pause } from 'lucide-react';
 
@@ -52,12 +51,13 @@ const AudioPlayer = ({
         backgroundPosition: 'center',
         backgroundRepeat: 'no-repeat',
         imageRendering: 'auto',
+        filter: image ? 'brightness(120%) contrast(110%) saturate(110%)' : 'none', // Enhance brightness, contrast, and saturation
       }}
     >
       <div
         className="w-full h-full rounded-lg overflow-hidden flex flex-col items-center justify-center"
         style={{
-          background: 'rgba(0, 0, 0, 0.4)',
+          background: hideText ? 'rgba(0, 0, 0, 0.2)' : 'rgba(0, 0, 0, 0.4)', // Lighter overlay when text is hidden
           backdropFilter: 'none',
         }}
       >
