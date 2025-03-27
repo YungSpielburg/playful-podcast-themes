@@ -59,7 +59,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            I've produced themes for the world's top podcasts including The All In Podcast, Acquired.fm, and many more. Let's create the sound that defines your show.
+            I'm a Grammy award-winning producer and songwriter who has produced themes for the world's top podcasts including The All In Podcast, Acquired.fm, and many more. Let's create the sound that defines your show.
           </motion.p>
           
           <motion.div 
