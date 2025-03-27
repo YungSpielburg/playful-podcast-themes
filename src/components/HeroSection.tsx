@@ -8,7 +8,7 @@ const podcasts = [
     name: 'All In Podcast', 
     description: 'Theme music',
     audioFile: '/Wet Your Beak.mp3',
-    image: '/ALL IN IMAGE.jpg'
+    image: '/all-in-image.jpg'
   },
   { 
     name: 'Acquired.fm', 
