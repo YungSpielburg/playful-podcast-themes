@@ -1,9 +1,32 @@
 
 import { motion } from 'framer-motion';
+import { useState, useRef } from 'react';
+import { Play, Pause } from 'lucide-react';
 
 const HeroSection = () => {
+  const [isPlaying, setIsPlaying] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
+
+  const togglePlayPause = () => {
+    if (!audioRef.current) return;
+    
+    if (isPlaying) {
+      audioRef.current.pause();
+    } else {
+      audioRef.current.play();
+    }
+    
+    setIsPlaying(!isPlaying);
+  };
+
   return (
     <section className="relative min-h-screen pt-20 flex items-center overflow-hidden">
+      <audio 
+        ref={audioRef} 
+        src="/sample-podcast-theme.mp3" 
+        onEnded={() => setIsPlaying(false)}
+      />
+      
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-20 right-0 w-96 h-96 bg-coral/20 rounded-full filter blur-3xl"></div>
         <div className="absolute bottom-10 left-10 w-72 h-72 bg-accent/20 rounded-full filter blur-3xl"></div>
@@ -67,10 +90,15 @@ const HeroSection = () => {
                 <div className="relative w-full h-full">
                   <div className="absolute inset-0 flex items-center justify-center">
                     <div className="w-32 h-32 rounded-full bg-white/10 backdrop-blur-md flex items-center justify-center">
-                      <div className="w-24 h-24 rounded-full bg-coral flex items-center justify-center animate-pulse-gentle shadow-neon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="text-white">
-                          <polygon points="5 3 19 12 5 21 5 3"></polygon>
-                        </svg>
+                      <div 
+                        onClick={togglePlayPause}
+                        className="w-24 h-24 rounded-full bg-coral flex items-center justify-center cursor-pointer hover:scale-105 transition-transform shadow-neon"
+                      >
+                        {isPlaying ? (
+                          <Pause className="text-white" size={40} />
+                        ) : (
+                          <Play className="text-white" size={40} />
+                        )}
                       </div>
                     </div>
                   </div>
@@ -78,11 +106,23 @@ const HeroSection = () => {
                   <div className="absolute bottom-6 left-0 right-0 px-6">
                     <div className="glass-dark rounded-xl p-4 flex items-center gap-4">
                       <div className="audio-wave">
-                        <div className="audio-wave-bar h-4 animate-wave-1"></div>
-                        <div className="audio-wave-bar h-5 animate-wave-2"></div>
-                        <div className="audio-wave-bar h-3 animate-wave-3"></div>
-                        <div className="audio-wave-bar h-6 animate-wave-4"></div>
-                        <div className="audio-wave-bar h-2 animate-wave-5"></div>
+                        {isPlaying ? (
+                          <>
+                            <div className="audio-wave-bar h-4 animate-wave-1"></div>
+                            <div className="audio-wave-bar h-5 animate-wave-2"></div>
+                            <div className="audio-wave-bar h-3 animate-wave-3"></div>
+                            <div className="audio-wave-bar h-6 animate-wave-4"></div>
+                            <div className="audio-wave-bar h-2 animate-wave-5"></div>
+                          </>
+                        ) : (
+                          <>
+                            <div className="audio-wave-bar h-2"></div>
+                            <div className="audio-wave-bar h-2"></div>
+                            <div className="audio-wave-bar h-2"></div>
+                            <div className="audio-wave-bar h-2"></div>
+                            <div className="audio-wave-bar h-2"></div>
+                          </>
+                        )}
                       </div>
                       <div className="flex-1">
                         <h4 className="text-white font-medium text-sm">The All In Podcast Theme</h4>
