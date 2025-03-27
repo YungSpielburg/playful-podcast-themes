@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import AudioPlayer from './AudioPlayer';
@@ -57,14 +58,7 @@ const HeroSection = () => {
       
       <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
         <div className="flex-1 pt-10">
-          <motion.span 
-            className="inline-block px-3 py-1 mb-6 rounded-full text-sm font-medium bg-accent text-accent-foreground shadow-neon-accent"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5 }}
-          >
-            #1 Podcast Theme Producer
-          </motion.span>
+          {/* The "#1 Podcast Theme Producer" button has been removed */}
           
           <motion.h1 
             className="text-5xl md:text-6xl lg:text-7xl font-display font-bold mb-6 tracking-tight"
