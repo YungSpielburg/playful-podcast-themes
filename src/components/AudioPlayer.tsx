@@ -61,7 +61,7 @@ const AudioPlayer = ({
           backdropFilter: 'none',
         }}
       >
-        <div className={`relative w-full h-full flex flex-col items-center ${buttonPosition === 'bottom' ? 'justify-end pb-4' : 'justify-center'} p-4 gap-1`}>
+        <div className={`relative w-full h-full flex flex-col items-center ${buttonPosition === 'bottom' ? 'justify-end pb-8' : 'justify-center'} p-4 gap-1`}>
           <audio ref={audioRef} src={audioFile} />
           <div
             onClick={handlePlayPause}
