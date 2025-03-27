@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import AudioPlayer from './AudioPlayer';
@@ -83,7 +84,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
           >
-            I'm a Grammy award-winning producer and songwriter who has produced themes for the world's top podcasts including The All In Podcast, Acquired.fm, and many more.
+            I'm a <span className="text-foreground font-semibold glow-accent">Grammy award-winning</span> producer and songwriter who has produced themes for the world's top podcasts including <span className="text-foreground font-semibold glow-accent">The All In Podcast, Acquired.fm</span>, and many more.
           </motion.p>
           
           <motion.p 
@@ -92,7 +93,7 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.25 }}
           >
-            Let's create the sound that defines your show.
+            Let's create the sound that <span className="text-foreground font-semibold glow-accent">defines your show</span>.
           </motion.p>
           
           <motion.div 
