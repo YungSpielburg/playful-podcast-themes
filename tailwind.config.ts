@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -29,6 +28,11 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				gold: {
+					light: '#D4AF37',
+					DEFAULT: '#CFB53B',
+					dark: '#996515',
+				},
 				teal: {
 					light: '#5eead4',
 					DEFAULT: '#14b8a6',
@@ -144,8 +148,8 @@ export default {
 			},
 			boxShadow: {
 				'glass': '0 4px 30px rgba(0, 0, 0, 0.3)',
-				'neon': '0 0 15px rgba(94, 234, 212, 0.8), 0 0 30px rgba(94, 234, 212, 0.6)',
-				'neon-accent': '0 0 15px rgba(217, 70, 239, 0.8), 0 0 30px rgba(217, 70, 239, 0.6)',
+				'neon': '0 0 8px rgba(207, 181, 59, 0.5), 0 0 15px rgba(207, 181, 59, 0.3)',
+				'neon-accent': '0 0 8px rgba(207, 181, 59, 0.5), 0 0 15px rgba(207, 181, 59, 0.3)',
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
