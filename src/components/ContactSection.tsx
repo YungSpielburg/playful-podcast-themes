@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useToast } from '@/hooks/use-toast';
@@ -148,7 +147,7 @@ const ContactSection = () => {
                           </svg>
                           Sending...
                         </>
-                      ) : "Connect With Me"}
+                      ) : "Book Your Free Consultation"}
                     </button>
                   </div>
                 </form>

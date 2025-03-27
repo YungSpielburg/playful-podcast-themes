@@ -96,7 +96,7 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.3 }}
           >
             <a href="#contact" className="btn-primary shadow-neon">
-              Connect With Me
+              Book a Consultation
             </a>
             <a href="#portfolio" className="btn-secondary">
               Hear My Work
