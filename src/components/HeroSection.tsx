@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import AudioPlayer from './AudioPlayer';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 const podcasts = [
   { 
@@ -40,6 +41,7 @@ const podcasts = [
 
 const HeroSection = () => {
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
+  const isMobile = useIsMobile();
 
   const togglePlayPause = (index: number) => {
     if (playingIndex === index) {
@@ -104,9 +106,9 @@ const HeroSection = () => {
           </motion.div>
         </div>
         
-        <div className="flex-1 relative">
+        <div className="flex-1 relative w-full">
           <motion.div
-            className="grid grid-cols-2 gap-4 w-full max-w-[400px] mx-auto"
+            className={`${isMobile ? 'grid grid-cols-1 sm:grid-cols-2 gap-6 mx-auto max-w-[90%]' : 'grid grid-cols-2 gap-4 w-full max-w-[400px] mx-auto'}`}
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ duration: 0.7, delay: 0.2 }}

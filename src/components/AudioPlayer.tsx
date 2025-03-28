@@ -1,6 +1,7 @@
 
 import { useState, useRef, useEffect } from 'react';
 import { Play, Pause } from 'lucide-react';
+import { useIsMobile } from '@/hooks/use-mobile';
 
 interface AudioPlayerProps {
   name: string;
@@ -25,6 +26,7 @@ const AudioPlayer = ({
 }: AudioPlayerProps) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const isMobile = useIsMobile();
   
   useEffect(() => {
     // Create or update audio element when audioFile changes
@@ -90,12 +92,12 @@ const AudioPlayer = ({
           <div className="flex flex-col items-start mb-1">
             <div
               onClick={handlePlayPause}
-              className="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform shadow-md bg-black/30 border-2 border-sand/40 hover:border-sand/70 ml-2 mb-1"
+              className={`${isMobile ? 'w-14 h-14' : 'w-10 h-10'} rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform shadow-md bg-black/30 border-2 border-sand/40 hover:border-sand/70 ml-2 mb-1`}
             >
               {isPlaying ? (
-                <Pause className="text-white" size={16} />
+                <Pause className={`text-white ${isMobile ? 'h-6 w-6' : 'h-4 w-4'}`} />
               ) : (
-                <Play className="text-white" size={16} />
+                <Play className={`text-white ${isMobile ? 'h-6 w-6' : 'h-4 w-4'}`} />
               )}
             </div>
             
