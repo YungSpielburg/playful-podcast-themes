@@ -73,9 +73,9 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            <span className="whitespace-nowrap">GIVE YOUR PODCAST</span><br />
+            <span className="whitespace-nowrap">Give Your Podcast</span><br />
             A <span className="font-opensans text-accent glow-accent">Signature</span><br />
-            <span className="text-accent glow-accent">SOUND</span>
+            <span className="text-accent glow-accent">Sound</span>
           </motion.h1>
           
           <motion.p 
