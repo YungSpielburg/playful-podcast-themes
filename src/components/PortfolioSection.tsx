@@ -6,7 +6,7 @@ import { Play, Pause } from 'lucide-react';
 const clientLogos = [
   { 
     name: 'All In Podcast', 
-    description: 'The theme helped them become a top 10 podcast worldwide',
+    description: 'My theme has risen with the show to become a top 10 podcast worldwide',
     highlight: true,
     audioFile: '/wet-your-beak.mp3'
   },
