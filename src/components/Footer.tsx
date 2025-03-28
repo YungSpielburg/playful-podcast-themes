@@ -23,7 +23,7 @@ const Footer = () => {
             <p className="text-sm text-muted-foreground mt-2">The #1 Podcast Intro Music Producer</p>
           </div>
           
-          <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
+          <div className="grid grid-cols-2 gap-8 sm:grid-cols-2 sm:gap-6">
             <div>
               <h2 className="text-sm font-semibold uppercase mb-4">Quick Links</h2>
               <ul className="space-y-2">
@@ -39,14 +39,6 @@ const Footer = () => {
                 <li><a href="https://x.com/yung_spielburg" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-teal text-sm">Twitter</a></li>
                 <li><a href="https://www.instagram.com/yung_spielburg" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-teal text-sm">Instagram</a></li>
                 <li><a href="https://www.linkedin.com/in/yung-spielburg-82b64b11/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-teal text-sm">LinkedIn</a></li>
-              </ul>
-            </div>
-            
-            <div>
-              <h2 className="text-sm font-semibold uppercase mb-4">Legal</h2>
-              <ul className="space-y-2">
-                <li><a href="#" className="text-muted-foreground hover:text-teal text-sm">Privacy Policy</a></li>
-                <li><a href="#" className="text-muted-foreground hover:text-teal text-sm">Terms of Service</a></li>
               </ul>
             </div>
           </div>
