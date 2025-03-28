@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useToast } from '@/hooks/use-toast';
@@ -91,11 +90,11 @@ const ContactForm = () => {
       transition={{ duration: 0.5, delay: 0.2 }}
     >
       <div className="p-2">
-        <div className="bg-gradient-to-br from-gold to-gold-dark rounded-lg p-8">
+        <div className="bg-white rounded-lg p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
-                <label htmlFor="name" className="block text-dark-bg text-sm font-medium mb-2">Your Name</label>
+                <label htmlFor="name" className="block text-dark-bg text-base font-medium mb-2">Your Name</label>
                 <input
                   type="text"
                   id="name"
@@ -103,12 +102,12 @@ const ContactForm = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-charcoal/90 backdrop-blur-sm border border-white/20 text-dark-bg placeholder:text-dark-bg/60 focus:outline-none focus:ring-2 focus:ring-gold/50"
+                  className="w-full px-4 py-3 rounded-lg bg-charcoal/90 backdrop-blur-sm border border-white/20 text-dark-bg text-lg placeholder:text-dark-bg/60 focus:outline-none focus:ring-2 focus:ring-white/50"
                   placeholder="John Smith"
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-dark-bg text-sm font-medium mb-2">Email Address</label>
+                <label htmlFor="email" className="block text-dark-bg text-base font-medium mb-2">Email Address</label>
                 <input
                   type="email"
                   id="email"
@@ -116,14 +115,14 @@ const ContactForm = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-charcoal/90 backdrop-blur-sm border border-white/20 text-dark-bg placeholder:text-dark-bg/60 focus:outline-none focus:ring-2 focus:ring-gold/50"
+                  className="w-full px-4 py-3 rounded-lg bg-charcoal/90 backdrop-blur-sm border border-white/20 text-dark-bg text-lg placeholder:text-dark-bg/60 focus:outline-none focus:ring-2 focus:ring-white/50"
                   placeholder="john@example.com"
                 />
               </div>
             </div>
             
             <div>
-              <label htmlFor="podcast" className="block text-dark-bg text-sm font-medium mb-2">Podcast Name</label>
+              <label htmlFor="podcast" className="block text-dark-bg text-base font-medium mb-2">Podcast Name</label>
               <input
                 type="text"
                 id="podcast"
@@ -131,20 +130,20 @@ const ContactForm = () => {
                 value={formData.podcast}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-lg bg-charcoal/90 backdrop-blur-sm border border-white/20 text-dark-bg placeholder:text-dark-bg/60 focus:outline-none focus:ring-2 focus:ring-gold/50"
+                className="w-full px-4 py-3 rounded-lg bg-charcoal/90 backdrop-blur-sm border border-white/20 text-dark-bg text-lg placeholder:text-dark-bg/60 focus:outline-none focus:ring-2 focus:ring-white/50"
                 placeholder="Your Amazing Podcast"
               />
             </div>
             
             <div>
-              <label htmlFor="message" className="block text-dark-bg text-sm font-medium mb-2">What are you looking for?</label>
+              <label htmlFor="message" className="block text-dark-bg text-base font-medium mb-2">What are you looking for?</label>
               <textarea
                 id="message"
                 name="message"
                 value={formData.message}
                 onChange={handleChange}
                 rows={4}
-                className="w-full px-4 py-3 rounded-lg bg-charcoal/90 backdrop-blur-sm border border-white/20 text-dark-bg placeholder:text-dark-bg/60 focus:outline-none focus:ring-2 focus:ring-gold/50"
+                className="w-full px-4 py-3 rounded-lg bg-charcoal/90 backdrop-blur-sm border border-white/20 text-dark-bg text-lg placeholder:text-dark-bg/60 focus:outline-none focus:ring-2 focus:ring-white/50"
                 placeholder="Tell me about your podcast and what kind of sound you're looking for..."
               ></textarea>
             </div>
