@@ -1,3 +1,4 @@
+
 import { motion } from 'framer-motion';
 import { useState } from 'react';
 import AudioPlayer from './AudioPlayer';
@@ -53,15 +54,19 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen pt-20 pb-10 flex items-center overflow-hidden">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 right-0 w-96 h-96 bg-indigo/20 rounded-full filter blur-3xl"></div>
+        {/* Enhanced background elements with soft red bursts */}
+        <div className="absolute top-20 right-0 w-96 h-96 bg-red/20 rounded-full filter blur-3xl"></div>
         <div className="absolute bottom-10 left-10 w-72 h-72 bg-accent/20 rounded-full filter blur-3xl"></div>
         
-        <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-indigo/15 rounded-full filter blur-3xl"></div>
-        <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-indigo/15 rounded-full filter blur-3xl"></div>
+        {/* New soft red bursts */}
+        <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-red/15 rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-coral/15 rounded-full filter blur-3xl"></div>
       </div>
       
       <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
         <div className="flex-1 pt-10">
+          {/* The "#1 Podcast Theme Producer" button has been removed */}
+          
           <motion.h1 
             className="font-anton text-5xl md:text-6xl lg:text-7xl tracking-wide mb-6"
             initial={{ opacity: 0, y: 20 }}
@@ -128,6 +133,7 @@ const HeroSection = () => {
             ))}
           </motion.div>
           
+          {/* Mobile-only Connect button - shown after the audio players */}
           {isMobile && (
             <motion.div
               className="mt-8 flex justify-center"

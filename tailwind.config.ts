@@ -1,3 +1,4 @@
+
 import type { Config } from "tailwindcss";
 
 export default {
@@ -28,16 +29,23 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
-				darkgreen: {
-					light: '#1A3A2F',
-					DEFAULT: '#11231c',
-					dark: '#0B1A15',
+				sand: '#F6F1E2',
+				charcoal: '#2F292A',
+				red: {
+					light: '#E56B5C',
+					DEFAULT: '#CD422D',
+					dark: '#A93524',
 				},
-				lightgray: '#dad7dc',
-				indigo: {
-					light: '#4840E6',
-					DEFAULT: '#2e27c3',
-					dark: '#251FA0',
+				coral: {
+					light: '#FF9A8B',
+					DEFAULT: '#FF6B6B',
+					dark: '#D63447',
+				},
+				accent: {
+					purple: '#c084fc',
+					pink: '#D946EF',
+					DEFAULT: 'hsl(var(--accent))',
+					foreground: 'hsl(var(--accent-foreground))'
 				},
 				primary: {
 					DEFAULT: 'hsl(var(--primary))',
@@ -54,10 +62,6 @@ export default {
 				muted: {
 					DEFAULT: 'hsl(var(--muted))',
 					foreground: 'hsl(var(--muted-foreground))'
-				},
-				accent: {
-					DEFAULT: 'hsl(var(--accent))',
-					foreground: 'hsl(var(--accent-foreground))'
 				},
 				popover: {
 					DEFAULT: 'hsl(var(--popover))',
@@ -144,7 +148,7 @@ export default {
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
 				display: ['Montserrat', 'sans-serif'],
-				gotham: ['Montserrat', 'sans-serif'],
+				gotham: ['Montserrat', 'sans-serif'], // Using Montserrat as Gotham alternative
 				cinematic: ['Playfair Display', 'serif'],
 				bebas: ['Bebas Neue', 'sans-serif'],
 				bangers: ['Bangers', 'cursive'],
@@ -153,8 +157,8 @@ export default {
 			},
 			boxShadow: {
 				'glass': '0 4px 30px rgba(0, 0, 0, 0.3)',
-				'neon': '0 0 8px rgba(46, 39, 195, 0.5), 0 0 15px rgba(46, 39, 195, 0.3)',
-				'neon-accent': '0 0 8px rgba(46, 39, 195, 0.5), 0 0 15px rgba(46, 39, 195, 0.3)',
+				'neon': '0 0 8px rgba(205, 66, 45, 0.5), 0 0 15px rgba(205, 66, 45, 0.3)',
+				'neon-accent': '0 0 8px rgba(205, 66, 45, 0.5), 0 0 15px rgba(205, 66, 45, 0.3)',
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
