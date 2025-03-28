@@ -67,7 +67,7 @@ const AudioPlayer = ({
 
   return (
     <div
-      className="aspect-square rounded-lg shadow-xl overflow-hidden p-px artistic-border"
+      className="aspect-square rounded-lg shadow-xl overflow-hidden p-px border-2 border-sand/30 hover:border-sand/60 transition-all duration-300"
       style={{
         backgroundImage: image ? `url(${image})` : 'linear-gradient(to bottom right, #ff6f61, #ffcc33)',
         backgroundSize: '100% 100%',
@@ -90,7 +90,7 @@ const AudioPlayer = ({
           <div className="flex flex-col items-start mb-1">
             <div
               onClick={handlePlayPause}
-              className="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform shadow-neon bg-black/30 border-2 border-black/40 hover:border-black/70 ml-2 mb-1"
+              className="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform shadow-md bg-black/30 border-2 border-sand/40 hover:border-sand/70 ml-2 mb-1"
             >
               {isPlaying ? (
                 <Pause className="text-white" size={16} />

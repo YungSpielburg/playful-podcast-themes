@@ -127,14 +127,14 @@ const HeroSection = () => {
           </motion.div>
           
           <motion.div
-            className="absolute top-1/4 -right-10 md:-right-20 w-24 h-24 rounded-full bg-accent/30 backdrop-blur-sm animate-float"
+            className="absolute top-1/4 -right-10 md:-right-20 w-24 h-24 rounded-full bg-sand/30 backdrop-blur-sm animate-float"
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.7 }}
             transition={{ duration: 0.7, delay: 0.5 }}
           />
           
           <motion.div
-            className="absolute bottom-1/4 -left-10 md:-left-20 w-20 h-20 rounded-full bg-coral/30 backdrop-blur-sm animate-float animation-delay-1000"
+            className="absolute bottom-1/4 -left-10 md:-left-20 w-20 h-20 rounded-full bg-sand/30 backdrop-blur-sm animate-float animation-delay-1000"
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.7 }}
             transition={{ duration: 0.7, delay: 0.7 }}
