@@ -91,7 +91,7 @@ const ContactForm = () => {
       transition={{ duration: 0.5, delay: 0.2 }}
     >
       <div className="p-2">
-        <div className="bg-gradient-to-br from-accent/80 to-accent-dark/90 rounded-lg p-8">
+        <div className="bg-gradient-to-br from-gold/80 to-gold-dark/90 rounded-lg p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
@@ -103,7 +103,7 @@ const ContactForm = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-charcoal/80 backdrop-blur-sm border border-white/10 text-sand placeholder:text-sand/60 focus:outline-none focus:ring-2 focus:ring-accent/50"
+                  className="w-full px-4 py-3 rounded-lg bg-charcoal/80 backdrop-blur-sm border border-white/10 text-sand placeholder:text-sand/60 focus:outline-none focus:ring-2 focus:ring-gold/50"
                   placeholder="John Smith"
                 />
               </div>
@@ -116,7 +116,7 @@ const ContactForm = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-charcoal/80 backdrop-blur-sm border border-white/10 text-sand placeholder:text-sand/60 focus:outline-none focus:ring-2 focus:ring-accent/50"
+                  className="w-full px-4 py-3 rounded-lg bg-charcoal/80 backdrop-blur-sm border border-white/10 text-sand placeholder:text-sand/60 focus:outline-none focus:ring-2 focus:ring-gold/50"
                   placeholder="john@example.com"
                 />
               </div>
@@ -131,7 +131,7 @@ const ContactForm = () => {
                 value={formData.podcast}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-lg bg-charcoal/80 backdrop-blur-sm border border-white/10 text-sand placeholder:text-sand/60 focus:outline-none focus:ring-2 focus:ring-accent/50"
+                className="w-full px-4 py-3 rounded-lg bg-charcoal/80 backdrop-blur-sm border border-white/10 text-sand placeholder:text-sand/60 focus:outline-none focus:ring-2 focus:ring-gold/50"
                 placeholder="Your Amazing Podcast"
               />
             </div>
@@ -144,7 +144,7 @@ const ContactForm = () => {
                 value={formData.message}
                 onChange={handleChange}
                 rows={4}
-                className="w-full px-4 py-3 rounded-lg bg-charcoal/80 backdrop-blur-sm border border-white/10 text-sand placeholder:text-sand/60 focus:outline-none focus:ring-2 focus:ring-accent/50"
+                className="w-full px-4 py-3 rounded-lg bg-charcoal/80 backdrop-blur-sm border border-white/10 text-sand placeholder:text-sand/60 focus:outline-none focus:ring-2 focus:ring-gold/50"
                 placeholder="Tell me about your podcast and what kind of sound you're looking for..."
               ></textarea>
             </div>
@@ -153,11 +153,11 @@ const ContactForm = () => {
               <button
                 type="submit"
                 disabled={isSubmitting}
-                className="w-full bg-white text-accent font-medium py-3 px-6 rounded-lg transition-all hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white/50 flex items-center justify-center"
+                className="w-full bg-white text-gold-dark font-medium py-3 px-6 rounded-lg transition-all hover:bg-white/90 focus:outline-none focus:ring-2 focus:ring-white/50 flex items-center justify-center"
               >
                 {isSubmitting ? (
                   <>
-                    <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-accent" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
+                    <svg className="animate-spin -ml-1 mr-2 h-4 w-4 text-gold-dark" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24">
                       <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4"></circle>
                       <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z"></path>
                     </svg>
