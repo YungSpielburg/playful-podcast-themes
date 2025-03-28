@@ -148,6 +148,7 @@ export default {
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
 				display: ['Montserrat', 'sans-serif'],
+				gotham: ['Montserrat', 'sans-serif'], // Using Montserrat as Gotham alternative
 				cinematic: ['Playfair Display', 'serif'],
 				bebas: ['Bebas Neue', 'sans-serif'],
 				bangers: ['Bangers', 'cursive'],

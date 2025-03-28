@@ -79,7 +79,7 @@ const HeroSection = () => {
           </motion.h1>
           
           <motion.p 
-            className="text-lg md:text-xl mb-4 text-muted-foreground max-w-xl"
+            className="font-gotham text-lg md:text-xl mb-4 text-muted-foreground max-w-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -88,7 +88,7 @@ const HeroSection = () => {
           </motion.p>
           
           <motion.p 
-            className="text-lg md:text-xl mb-8 text-muted-foreground max-w-xl"
+            className="font-gotham text-lg md:text-xl mb-8 text-muted-foreground max-w-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.25 }}
@@ -102,10 +102,10 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <a href="#contact" className="btn-primary shadow-neon">
+            <a href="#contact" className="font-gotham btn-primary shadow-neon">
               Connect With Me
             </a>
-            <a href="#portfolio" className="btn-secondary">
+            <a href="#portfolio" className="font-gotham btn-secondary">
               Hear My Work
             </a>
           </motion.div>
