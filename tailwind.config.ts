@@ -29,7 +29,7 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				sand: '#F6F1E2',
-				charcoal: '#11231c',
+				charcoal: '#0d200d',
 				red: {
 					light: '#E56B5C',
 					DEFAULT: '#CD422D',
@@ -147,7 +147,7 @@ export default {
 			fontFamily: {
 				sans: ['Inter', 'sans-serif'],
 				display: ['Montserrat', 'sans-serif'],
-				gotham: ['Montserrat', 'sans-serif'], // Using Montserrat as Gotham alternative
+				gotham: ['Montserrat', 'sans-serif'],
 				cinematic: ['Playfair Display', 'serif'],
 				bebas: ['Bebas Neue', 'sans-serif'],
 				bangers: ['Bangers', 'cursive'],
