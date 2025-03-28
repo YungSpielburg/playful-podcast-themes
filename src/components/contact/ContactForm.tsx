@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useToast } from '@/hooks/use-toast';
@@ -102,7 +103,7 @@ const ContactForm = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-charcoal/90 backdrop-blur-sm border border-white/20 text-dark-bg text-lg placeholder:text-dark-bg/60 focus:outline-none focus:ring-2 focus:ring-white/50"
+                  className="w-full px-4 py-3 rounded-lg bg-charcoal/90 backdrop-blur-sm border border-white/20 text-white text-lg placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/50"
                   placeholder="John Smith"
                 />
               </div>
@@ -115,7 +116,7 @@ const ContactForm = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-charcoal/90 backdrop-blur-sm border border-white/20 text-dark-bg text-lg placeholder:text-dark-bg/60 focus:outline-none focus:ring-2 focus:ring-white/50"
+                  className="w-full px-4 py-3 rounded-lg bg-charcoal/90 backdrop-blur-sm border border-white/20 text-white text-lg placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/50"
                   placeholder="john@example.com"
                 />
               </div>
@@ -130,7 +131,7 @@ const ContactForm = () => {
                 value={formData.podcast}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-lg bg-charcoal/90 backdrop-blur-sm border border-white/20 text-dark-bg text-lg placeholder:text-dark-bg/60 focus:outline-none focus:ring-2 focus:ring-white/50"
+                className="w-full px-4 py-3 rounded-lg bg-charcoal/90 backdrop-blur-sm border border-white/20 text-white text-lg placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/50"
                 placeholder="Your Amazing Podcast"
               />
             </div>
@@ -143,7 +144,7 @@ const ContactForm = () => {
                 value={formData.message}
                 onChange={handleChange}
                 rows={4}
-                className="w-full px-4 py-3 rounded-lg bg-charcoal/90 backdrop-blur-sm border border-white/20 text-dark-bg text-lg placeholder:text-dark-bg/60 focus:outline-none focus:ring-2 focus:ring-white/50"
+                className="w-full px-4 py-3 rounded-lg bg-charcoal/90 backdrop-blur-sm border border-white/20 text-white text-lg placeholder:text-white/60 focus:outline-none focus:ring-2 focus:ring-white/50"
                 placeholder="Tell me about your podcast and what kind of sound you're looking for..."
               ></textarea>
             </div>
