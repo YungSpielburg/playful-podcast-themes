@@ -67,7 +67,7 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <span className="whitespace-nowrap">GIVE YOUR PODCAST</span><br />
-            A <span className="font-cinematic italic text-accent glow-accent">Signature</span><br />
+            A <span className="font-bebas italic text-accent glow-accent">Signature</span><br />
             <span className="text-accent glow-accent">SOUND</span>
           </motion.h1>
           
