@@ -26,13 +26,13 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <a href="/" className="text-2xl font-display font-bold text-foreground flex items-center gap-2">
           <div className="flex space-x-[2px]">
-            <div className="w-1 h-5 bg-red rounded-full animate-wave-1"></div>
-            <div className="w-1 h-6 bg-red rounded-full animate-wave-2"></div>
-            <div className="w-1 h-4 bg-red rounded-full animate-wave-3"></div>
-            <div className="w-1 h-7 bg-red rounded-full animate-wave-4"></div>
-            <div className="w-1 h-3 bg-red rounded-full animate-wave-5"></div>
+            <div className="w-1 h-5 bg-gold rounded-full animate-wave-1"></div>
+            <div className="w-1 h-6 bg-gold rounded-full animate-wave-2"></div>
+            <div className="w-1 h-4 bg-gold rounded-full animate-wave-3"></div>
+            <div className="w-1 h-7 bg-gold rounded-full animate-wave-4"></div>
+            <div className="w-1 h-3 bg-gold rounded-full animate-wave-5"></div>
           </div>
-          <span className="glow-red">Yung Spielburg</span>
+          <span className="glow-gold">Yung Spielburg</span>
         </a>
         
         <div className="hidden md:flex items-center space-x-8">

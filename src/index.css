@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&display=swap');
 
 @tailwind base;
@@ -15,8 +16,8 @@
     --popover: 223 94% 10%;
     --popover-foreground: 39 44% 92%;
 
-    --primary: 9 64% 49%;
-    --primary-foreground: 39 44% 92%;
+    --primary: 39 71% 64%;
+    --primary-foreground: 0 0% 10%;
 
     --secondary: 223 94% 14%;
     --secondary-foreground: 39 44% 92%;
@@ -24,15 +25,15 @@
     --muted: 223 94% 14%;
     --muted-foreground: 39 44% 86%;
 
-    --accent: 9 64% 49%;
-    --accent-foreground: 39 44% 92%;
+    --accent: 39 71% 64%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 39 44% 92%;
 
     --border: 223 94% 14%;
     --input: 223 94% 14%;
-    --ring: 9 64% 49%;
+    --ring: 39 71% 64%;
 
     --radius: 0.75rem;
   }
@@ -46,12 +47,12 @@
   }
 
   body {
-    @apply bg-charcoal text-sand antialiased selection:bg-red/20;
+    @apply bg-charcoal text-sand antialiased selection:bg-gold/20;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
   
   ::selection {
-    @apply bg-red/20;
+    @apply bg-gold/20;
   }
 }
 
@@ -69,7 +70,7 @@
   }
   
   .audio-wave-bar {
-    @apply w-1 bg-red rounded-full;
+    @apply w-1 bg-gold rounded-full;
   }
   
   .neon-glow {
@@ -89,7 +90,7 @@
   }
   
   .btn-primary {
-    @apply bg-red text-sand rounded-full px-6 py-3 font-medium transition-all hover:bg-red-light hover:shadow-lg;
+    @apply bg-gold text-charcoal rounded-full px-6 py-3 font-medium transition-all hover:bg-gold-light hover:shadow-lg;
   }
   
   .btn-secondary {
@@ -97,7 +98,7 @@
   }
   
   .navlink {
-    @apply relative text-foreground/80 hover:text-foreground transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-red after:transition-all hover:after:w-full;
+    @apply relative text-foreground/80 hover:text-foreground transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-gold after:transition-all hover:after:w-full;
   }
   
   .client-logo {
@@ -105,7 +106,7 @@
   }
   
   .artistic-border {
-    @apply border-2 border-red/30 hover:border-red/60 transition-all duration-300;
+    @apply border-2 border-gold/30 hover:border-gold/60 transition-all duration-300;
   }
   
   .artistic-card {
@@ -113,7 +114,7 @@
   }
   
   .accent-highlight {
-    @apply text-red font-semibold;
+    @apply text-gold font-semibold;
   }
 }
 
@@ -128,11 +129,11 @@
   }
   
   .glow-accent {
-    text-shadow: 0 0 4px theme('colors.red/30');
+    text-shadow: 0 0 4px theme('colors.gold/30');
   }
   
-  .glow-red {
-    text-shadow: 0 0 4px theme('colors.red/30');
+  .glow-gold {
+    text-shadow: 0 0 4px theme('colors.gold/30');
   }
   
   .glow-coral {
