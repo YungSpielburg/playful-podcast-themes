@@ -116,9 +116,9 @@ const PortfolioSection = () => {
       ))}
       
       <div className="section-container">
-        <div className="text-center max-w-3xl mx-auto">
+        <div className="text-center max-w-3xl mx-auto flex flex-col items-center justify-center">
           <motion.h2 
-            className="font-anton text-4xl md:text-5xl lg:text-6xl font-bold mb-3 tracking-wide whitespace-nowrap"
+            className="font-anton text-4xl md:text-5xl lg:text-6xl font-bold mb-3 tracking-wide whitespace-nowrap text-center"
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
