@@ -24,6 +24,7 @@ const AudioPlayer = ({
   buttonPosition = 'center'
 }: AudioPlayerProps) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  const [error, setError] = useState<string | null>(null);
   
   useEffect(() => {
     // Create or update audio element when audioFile changes
@@ -31,6 +32,7 @@ const AudioPlayer = ({
       if (isPlaying) {
         audioRef.current.play().catch(error => {
           console.error("Error playing audio:", error);
+          setError(`Could not play audio: ${error.message}`);
         });
       } else {
         audioRef.current.pause();
@@ -43,18 +45,25 @@ const AudioPlayer = ({
       if (isPlaying) {
         audioRef.current.pause();
       } else {
+        setError(null); // Clear previous errors
         audioRef.current.play().catch(error => {
           console.error("Error playing audio:", error);
+          setError(`Could not play audio: ${error.message}`);
         });
       }
       onTogglePlay();
     }
   };
 
-  // Log the image path for debugging
-  if (image) {
-    console.log(`Attempting to load image: ${image}`);
-  }
+  // Log the image and audio file paths for debugging
+  useEffect(() => {
+    if (image) {
+      console.log(`Loading image: ${image}`);
+    }
+    if (audioFile) {
+      console.log(`Loading audio: ${audioFile}`);
+    }
+  }, [image, audioFile]);
 
   return (
     <div
@@ -76,7 +85,7 @@ const AudioPlayer = ({
         }}
       >
         <div className={`relative w-full h-full flex flex-col items-start ${buttonPosition === 'bottom' ? 'justify-end pb-2' : 'justify-center'} p-4`}>
-          <audio ref={audioRef} src={audioFile} />
+          <audio ref={audioRef} src={audioFile} preload="auto" />
           
           <div className="flex flex-col items-start mb-1">
             <div
@@ -98,7 +107,13 @@ const AudioPlayer = ({
             )}
           </div>
           
-          {isPlaying && (
+          {error && (
+            <div className="absolute bottom-2 right-2 bg-red-500/80 text-white text-xs p-1 rounded">
+              {error}
+            </div>
+          )}
+          
+          {isPlaying && !error && (
             <div className="ml-2 mb-1">
               <div className="audio-wave">
                 <div className="audio-wave-bar h-2 animate-wave-1"></div>
