@@ -137,7 +137,7 @@ const HeroSection = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.4 }}
             >
-              <a href="#contact" className="btn-primary shadow-neon w-full max-w-[250px]">
+              <a href="#contact" className="btn-primary shadow-neon w-full max-w-[250px] text-center flex justify-center items-center">
                 Connect With Me
               </a>
             </motion.div>
