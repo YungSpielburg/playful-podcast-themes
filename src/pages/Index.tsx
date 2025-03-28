@@ -36,18 +36,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen bg-dark-bg text-foreground relative overflow-hidden">
-      {/* Background noise texture overlay */}
-      <div className="fixed inset-0 bg-noise opacity-[0.03] mix-blend-soft-light pointer-events-none"></div>
-      
-      {/* Enhanced gradient orbs with accent tones */}
-      <div className="fixed -top-[30%] -right-[20%] w-[70%] h-[70%] bg-gradient-radial from-accent/20 to-transparent opacity-30 blur-3xl pointer-events-none"></div>
-      <div className="fixed -bottom-[30%] -left-[20%] w-[70%] h-[70%] bg-gradient-radial from-accent/20 to-transparent opacity-30 blur-3xl pointer-events-none"></div>
-      
-      {/* Soft accent bursts in background */}
-      <div className="fixed top-[15%] left-[10%] w-[50%] h-[50%] bg-gradient-radial from-accent/15 to-transparent opacity-40 blur-3xl pointer-events-none"></div>
-      <div className="fixed bottom-[20%] right-[15%] w-[40%] h-[40%] bg-gradient-radial from-gold/20 to-transparent opacity-30 blur-3xl pointer-events-none"></div>
-      <div className="fixed top-[40%] right-[5%] w-[30%] h-[30%] bg-gradient-radial from-gold/15 to-transparent opacity-40 blur-3xl pointer-events-none"></div>
-      
       <Navbar />
       
       <motion.div
