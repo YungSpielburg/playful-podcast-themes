@@ -1,4 +1,3 @@
-
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&display=swap');
 
 @tailwind base;
@@ -7,33 +6,33 @@
 
 @layer base {
   :root {
-    --background: 331 87% 27%;
+    --background: 0 0% 20%;
     --foreground: 39 44% 92%;
 
-    --card: 331 87% 30%;
+    --card: 0 0% 25%;
     --card-foreground: 39 44% 92%;
 
-    --popover: 331 87% 30%;
+    --popover: 0 0% 25%;
     --popover-foreground: 39 44% 92%;
 
     --primary: 39 71% 64%;
     --primary-foreground: 0 0% 10%;
 
-    --secondary: 331 87% 34%;
+    --secondary: 0 0% 30%;
     --secondary-foreground: 39 44% 92%;
 
-    --muted: 331 87% 34%;
+    --muted: 0 0% 30%;
     --muted-foreground: 39 44% 86%;
 
-    --accent: 39 71% 64%;
-    --accent-foreground: 0 0% 10%;
+    --accent: 331 87% 27%;
+    --accent-foreground: 39 44% 92%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 39 44% 92%;
 
-    --border: 331 87% 34%;
-    --input: 331 87% 34%;
-    --ring: 39 71% 64%;
+    --border: 0 0% 30%;
+    --input: 0 0% 30%;
+    --ring: 331 87% 27%;
 
     --radius: 0.75rem;
   }
@@ -47,12 +46,12 @@
   }
 
   body {
-    @apply bg-charcoal text-sand antialiased selection:bg-gold/20;
+    @apply bg-charcoal text-sand antialiased selection:bg-accent/20;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
   
   ::selection {
-    @apply bg-gold/20;
+    @apply bg-accent/20;
   }
 }
 
@@ -90,7 +89,7 @@
   }
   
   .btn-primary {
-    @apply bg-gold text-charcoal rounded-full px-6 py-3 font-medium transition-all hover:bg-gold-light hover:shadow-lg;
+    @apply bg-accent text-sand rounded-full px-6 py-3 font-medium transition-all hover:bg-accent-dark hover:shadow-lg;
   }
   
   .btn-secondary {
@@ -98,7 +97,7 @@
   }
   
   .navlink {
-    @apply relative text-foreground/80 hover:text-foreground transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-gold after:transition-all hover:after:w-full;
+    @apply relative text-foreground/80 hover:text-foreground transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-accent after:transition-all hover:after:w-full;
   }
   
   .client-logo {
@@ -106,7 +105,7 @@
   }
   
   .artistic-border {
-    @apply border-2 border-gold/30 hover:border-gold/60 transition-all duration-300;
+    @apply border-2 border-accent/30 hover:border-accent/60 transition-all duration-300;
   }
   
   .artistic-card {
@@ -114,7 +113,7 @@
   }
   
   .accent-highlight {
-    @apply text-gold font-semibold;
+    @apply text-accent font-semibold;
   }
 }
 
@@ -129,7 +128,7 @@
   }
   
   .glow-accent {
-    text-shadow: 0 0 4px theme('colors.gold/30');
+    text-shadow: 0 0 4px theme('colors.accent/30');
   }
   
   .glow-gold {
