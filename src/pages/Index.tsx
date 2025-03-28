@@ -39,14 +39,14 @@ const Index = () => {
       {/* Background noise texture overlay */}
       <div className="fixed inset-0 bg-noise opacity-[0.03] mix-blend-soft-light pointer-events-none"></div>
       
-      {/* Enhanced gradient orbs with redder tones */}
-      <div className="fixed -top-[30%] -right-[20%] w-[70%] h-[70%] bg-gradient-radial from-red/30 to-transparent opacity-30 blur-3xl pointer-events-none"></div>
-      <div className="fixed -bottom-[30%] -left-[20%] w-[70%] h-[70%] bg-gradient-radial from-red/30 to-transparent opacity-30 blur-3xl pointer-events-none"></div>
+      {/* Enhanced gradient orbs with gold tones */}
+      <div className="fixed -top-[30%] -right-[20%] w-[70%] h-[70%] bg-gradient-radial from-gold/30 to-transparent opacity-30 blur-3xl pointer-events-none"></div>
+      <div className="fixed -bottom-[30%] -left-[20%] w-[70%] h-[70%] bg-gradient-radial from-gold/30 to-transparent opacity-30 blur-3xl pointer-events-none"></div>
       
-      {/* New soft red bursts in background */}
-      <div className="fixed top-[15%] left-[10%] w-[50%] h-[50%] bg-gradient-radial from-red/20 to-transparent opacity-40 blur-3xl pointer-events-none"></div>
-      <div className="fixed bottom-[20%] right-[15%] w-[40%] h-[40%] bg-gradient-radial from-red/25 to-transparent opacity-30 blur-3xl pointer-events-none"></div>
-      <div className="fixed top-[40%] right-[5%] w-[30%] h-[30%] bg-gradient-radial from-coral/20 to-transparent opacity-40 blur-3xl pointer-events-none"></div>
+      {/* Soft gold bursts in background */}
+      <div className="fixed top-[15%] left-[10%] w-[50%] h-[50%] bg-gradient-radial from-gold/20 to-transparent opacity-40 blur-3xl pointer-events-none"></div>
+      <div className="fixed bottom-[20%] right-[15%] w-[40%] h-[40%] bg-gradient-radial from-gold/25 to-transparent opacity-30 blur-3xl pointer-events-none"></div>
+      <div className="fixed top-[40%] right-[5%] w-[30%] h-[30%] bg-gradient-radial from-gold/20 to-transparent opacity-40 blur-3xl pointer-events-none"></div>
       
       <Navbar />
       

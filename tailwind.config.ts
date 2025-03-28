@@ -29,7 +29,7 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				sand: '#F6F1E2',
-				charcoal: '#010c24',
+				charcoal: '#7E0950',
 				gold: {
 					light: '#F0D395',
 					DEFAULT: '#E5B760',
