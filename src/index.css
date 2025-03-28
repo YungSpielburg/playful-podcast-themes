@@ -90,7 +90,7 @@
   }
   
   .btn-primary {
-    @apply bg-primary text-primary-foreground rounded-full px-6 py-3 font-medium transition-all hover:bg-primary-dark hover:shadow-md;
+    @apply bg-primary text-primary-foreground rounded-full px-6 py-3 font-medium transition-all hover:bg-primary/90 hover:shadow-md;
   }
   
   .btn-secondary {
