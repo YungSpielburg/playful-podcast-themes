@@ -7,7 +7,7 @@ const podcasts = [
   { 
     name: 'All In Podcast', 
     description: 'Theme music',
-    audioFile: '/Wet Your Beak.mp3',
+    audioFile: './Wet Your Beak.mp3',
     image: '/all-in-image.jpg',
     hideText: true,
     buttonPosition: 'bottom' as const
@@ -15,7 +15,7 @@ const podcasts = [
   { 
     name: 'Acquired.fm', 
     description: 'Custom intro',
-    audioFile: '/Who Got The Truth.mp3',
+    audioFile: './Who Got The Truth.mp3',
     image: '/acquired-podcast-jpg.jpeg',
     hideText: true,
     buttonPosition: 'bottom' as const
@@ -23,7 +23,7 @@ const podcasts = [
   { 
     name: 'A16Z', 
     description: 'Theme music',
-    audioFile: '/A 16 Z Theme 8.6 (15s B).mp3',
+    audioFile: './A 16 Z Theme 8.6 (15s B).mp3',
     image: '/a16z-image-2.jpg',
     hideText: true,
     buttonPosition: 'bottom' as const
@@ -31,7 +31,7 @@ const podcasts = [
   { 
     name: 'Not Boring', 
     description: 'Outro theme',
-    audioFile: '/Not Boring (outro theme).mp3',
+    audioFile: './Not Boring (outro theme).mp3',
     image: 'not-boring-image.jpg',
     hideText: true,
     buttonPosition: 'bottom' as const

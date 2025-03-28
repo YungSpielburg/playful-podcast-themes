@@ -1,5 +1,5 @@
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { Play, Pause } from 'lucide-react';
 
 interface AudioPlayerProps {
@@ -24,6 +24,19 @@ const AudioPlayer = ({
   buttonPosition = 'center'
 }: AudioPlayerProps) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
+  
+  useEffect(() => {
+    // Create or update audio element when audioFile changes
+    if (audioRef.current) {
+      if (isPlaying) {
+        audioRef.current.play().catch(error => {
+          console.error("Error playing audio:", error);
+        });
+      } else {
+        audioRef.current.pause();
+      }
+    }
+  }, [isPlaying, audioFile]);
 
   const handlePlayPause = () => {
     if (audioRef.current) {
@@ -65,10 +78,10 @@ const AudioPlayer = ({
         <div className={`relative w-full h-full flex flex-col items-start ${buttonPosition === 'bottom' ? 'justify-end pb-2' : 'justify-center'} p-4`}>
           <audio ref={audioRef} src={audioFile} />
           
-          <div className="flex flex-col items-start mb-1"> {/* Reduced margin-bottom */}
+          <div className="flex flex-col items-start mb-1">
             <div
               onClick={handlePlayPause}
-              className="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform shadow-neon bg-black/30 border-2 border-black/40 hover:border-black/70 ml-2 mb-1" // Changed colors to black with opacity
+              className="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform shadow-neon bg-black/30 border-2 border-black/40 hover:border-black/70 ml-2 mb-1"
             >
               {isPlaying ? (
                 <Pause className="text-white" size={16} />
@@ -86,7 +99,7 @@ const AudioPlayer = ({
           </div>
           
           {isPlaying && (
-            <div className="ml-2 mb-1"> {/* Added margin-bottom to wave animation */}
+            <div className="ml-2 mb-1">
               <div className="audio-wave">
                 <div className="audio-wave-bar h-2 animate-wave-1"></div>
                 <div className="audio-wave-bar h-3 animate-wave-2"></div>
