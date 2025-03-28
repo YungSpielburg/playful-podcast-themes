@@ -2,6 +2,7 @@
 import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Play, Pause } from 'lucide-react';
+import { useIsMobile } from '../hooks/use-mobile';
 
 const clientLogos = [
   { 
@@ -63,6 +64,7 @@ const clientLogos = [
 const PortfolioSection = () => {
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
   const audioRefs = useRef<(HTMLAudioElement | null)[]>(Array(clientLogos.length).fill(null));
+  const isMobile = useIsMobile();
 
   const fadeInUpVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -118,13 +120,21 @@ const PortfolioSection = () => {
       <div className="section-container">
         <div className="text-center max-w-3xl mx-auto flex flex-col items-center justify-center">
           <motion.h2 
-            className="font-anton text-4xl md:text-5xl lg:text-6xl font-bold mb-3 tracking-wide whitespace-nowrap text-center"
+            className={`font-anton text-3xl md:text-5xl lg:text-6xl font-bold mb-3 tracking-wide ${isMobile ? 'text-center' : 'text-center whitespace-nowrap'}`}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Trusted by the World's <span className="text-accent glow-accent">Top Podcasts</span>
+            {isMobile ? (
+              <>
+                Trusted by the World's<br /><span className="text-accent glow-accent">Top Podcasts</span>
+              </>
+            ) : (
+              <>
+                Trusted by the World's <span className="text-accent glow-accent">Top Podcasts</span>
+              </>
+            )}
           </motion.h2>
           <motion.p 
             className="section-subtitle mx-auto"
