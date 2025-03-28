@@ -13,6 +13,15 @@ const ContactFormHeader = () => {
       >
         Let's Create Your <span className="text-coral">Signature Sound</span>
       </motion.h2>
+      <motion.p
+        className="mt-4 text-muted-foreground"
+        initial={{ opacity: 0, y: 20 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.5, delay: 0.1 }}
+      >
+        Fill out the form for a free call
+      </motion.p>
     </div>
   );
 };
