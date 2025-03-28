@@ -25,7 +25,7 @@ const AboutSection = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div className="artistic-card rounded-2xl p-8 space-y-4 h-full min-h-[250px] flex flex-col">
+            <div className="artistic-card rounded-2xl p-8 space-y-4 h-full min-h-[250px] flex flex-col transition-all duration-300 hover:border-red/60 hover:shadow-neon">
               <h3 className="text-2xl font-display font-bold flex items-center gap-2">
                 <Award className="h-6 w-6 text-red" />
                 Accolades
@@ -37,7 +37,7 @@ const AboutSection = () => {
               </ul>
             </div>
 
-            <div className="artistic-card rounded-2xl p-8 space-y-4 h-full min-h-[250px] flex flex-col">
+            <div className="artistic-card rounded-2xl p-8 space-y-4 h-full min-h-[250px] flex flex-col transition-all duration-300 hover:border-red/60 hover:shadow-neon">
               <h3 className="text-2xl font-display font-bold flex items-center gap-2">
                 <MusicIcon className="h-6 w-6 text-red" />
                 Artist Collaborations
@@ -56,7 +56,7 @@ const AboutSection = () => {
             viewport={{ once: true }}
             className="space-y-6"
           >
-            <div className="artistic-card rounded-2xl p-8 space-y-4 h-full min-h-[250px] flex flex-col">
+            <div className="artistic-card rounded-2xl p-8 space-y-4 h-full min-h-[250px] flex flex-col transition-all duration-300 hover:border-red/60 hover:shadow-neon">
               <h3 className="text-2xl font-display font-bold flex items-center gap-2">
                 <Briefcase className="h-6 w-6 text-red" />
                 Brand Partnerships
@@ -67,7 +67,7 @@ const AboutSection = () => {
               </p>
             </div>
 
-            <div className="artistic-card rounded-2xl p-8 space-y-4 h-full min-h-[250px] flex flex-col">
+            <div className="artistic-card rounded-2xl p-8 space-y-4 h-full min-h-[250px] flex flex-col transition-all duration-300 hover:border-red/60 hover:shadow-neon">
               <h3 className="text-2xl font-display font-bold flex items-center gap-2">
                 <Tv className="h-6 w-6 text-red" />
                 Featured Works
