@@ -1,10 +1,11 @@
+
 import { motion } from 'framer-motion';
 import { Music, FileAudio2, Headphones, MusicIcon } from 'lucide-react';
 
 const services = [
   {
     title: "Audio Brand Definition",
-    description: "Who’s your dream musical guest for a live taping of your show? What shared values bring your audience together? Questions like these help us define your sonic identity and uncover the sound that feels unmistakably you.",
+    description: "Who's your dream musical guest for a live taping of your show? What shared values bring your audience together? Questions like these help us define your sonic identity and uncover the sound that feels unmistakably you.",
     icon: (
       <Headphones className="w-6 h-6" />
     )
@@ -90,16 +91,10 @@ const ServicesSection = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.5, delay: 0.2 }}
         >
-          <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-            <div className="flex-1">
-              <h3 className="text-2xl font-display font-bold mb-2">Ready to stand out with premium audio?</h3>
-              <p className="text-muted-foreground">Let's create the perfect sound that captures your podcast's unique personality.</p>
-            </div>
-            <div className="flex-shrink-0">
-              <a href="#contact" className="btn-primary shadow-neon">
-                Connect With Me
-              </a>
-            </div>
+          <div className="flex flex-col items-center justify-center">
+            <a href="#contact" className="btn-primary shadow-neon">
+              Schedule A Call
+            </a>
           </div>
         </motion.div>
       </div>
