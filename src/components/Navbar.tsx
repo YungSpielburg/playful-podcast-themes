@@ -39,7 +39,7 @@ const Navbar = () => {
           <a href="#portfolio" className="navlink">Portfolio</a>
           <a href="#services" className="navlink">Services</a>
           <a href="#about" className="navlink">About</a>
-          <a href="#contact" className="btn-primary">Get in Touch</a>
+          <a href="#contact" className="btn-primary">Connect With Me</a>
         </div>
         
         <button className="md:hidden text-foreground">
