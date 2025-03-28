@@ -45,8 +45,8 @@ const Index = () => {
       
       {/* Soft accent bursts in background */}
       <div className="fixed top-[15%] left-[10%] w-[50%] h-[50%] bg-gradient-radial from-accent/20 to-transparent opacity-40 blur-3xl pointer-events-none"></div>
-      <div className="fixed bottom-[20%] right-[15%] w-[40%] h-[40%] bg-gradient-radial from-accent/25 to-transparent opacity-30 blur-3xl pointer-events-none"></div>
-      <div className="fixed top-[40%] right-[5%] w-[30%] h-[30%] bg-gradient-radial from-accent/20 to-transparent opacity-40 blur-3xl pointer-events-none"></div>
+      <div className="fixed bottom-[20%] right-[15%] w-[40%] h-[40%] bg-gradient-radial from-gold/25 to-transparent opacity-30 blur-3xl pointer-events-none"></div>
+      <div className="fixed top-[40%] right-[5%] w-[30%] h-[30%] bg-gradient-radial from-gold/20 to-transparent opacity-40 blur-3xl pointer-events-none"></div>
       
       <Navbar />
       

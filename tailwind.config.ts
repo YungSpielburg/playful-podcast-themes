@@ -33,14 +33,14 @@ export default {
 				sand: '#F6F1E2',
 				charcoal: '#333333',
 				accent: {
-					light: '#9A2468',
-					DEFAULT: '#7E0950',
-					dark: '#5D0A3A',
+					light: '#B00E6C',
+					DEFAULT: '#920c58',
+					dark: '#730A46',
 				},
 				gold: {
-					light: '#F0D395',
-					DEFAULT: '#E5B760',
-					dark: '#C99B45',
+					light: '#FFFF4D',
+					DEFAULT: '#fefe00',
+					dark: '#E6E500',
 				},
 				red: {
 					light: '#E56B5C',
