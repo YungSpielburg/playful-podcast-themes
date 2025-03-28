@@ -55,8 +55,13 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen pt-20 pb-10 flex items-center overflow-hidden">
       <div className="absolute inset-0 -z-10">
-        <div className="absolute top-20 right-0 w-96 h-96 bg-coral/20 rounded-full filter blur-3xl"></div>
+        {/* Enhanced background elements with soft red bursts */}
+        <div className="absolute top-20 right-0 w-96 h-96 bg-red/20 rounded-full filter blur-3xl"></div>
         <div className="absolute bottom-10 left-10 w-72 h-72 bg-accent/20 rounded-full filter blur-3xl"></div>
+        
+        {/* New soft red bursts */}
+        <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-red/15 rounded-full filter blur-3xl"></div>
+        <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-coral/15 rounded-full filter blur-3xl"></div>
       </div>
       
       <div className="container mx-auto px-4 flex flex-col lg:flex-row items-center gap-12">
@@ -155,6 +160,14 @@ const HeroSection = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 0.7 }}
             transition={{ duration: 0.7, delay: 0.7 }}
+          />
+          
+          {/* New decorative elements that match the red bursts theme */}
+          <motion.div
+            className="absolute -top-10 left-1/3 w-16 h-16 rounded-full bg-red/20 backdrop-blur-sm animate-float animation-delay-500"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 0.6 }}
+            transition={{ duration: 0.7, delay: 0.6 }}
           />
         </div>
       </div>
