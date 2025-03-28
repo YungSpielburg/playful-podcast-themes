@@ -21,18 +21,18 @@ const podcasts = [
     buttonPosition: 'bottom' as const
   },
   { 
-    name: 'A16Z', 
-    description: 'Theme music',
-    audioFile: '/a16z-15s-b.mp3',
-    image: '/a16z-image-2.jpg',
-    hideText: true,
-    buttonPosition: 'bottom' as const
-  },
-  { 
     name: 'The Happy Dentist', 
     description: 'Theme song',
     audioFile: '/happy-dentist.mp3',
     image: '/happy-dentist-image-2.jpeg',
+    hideText: true,
+    buttonPosition: 'bottom' as const
+  },
+  { 
+    name: 'A16Z', 
+    description: 'Theme music',
+    audioFile: '/a16z-15s-b.mp3',
+    image: '/a16z-image-2.jpg',
     hideText: true,
     buttonPosition: 'bottom' as const
   },
