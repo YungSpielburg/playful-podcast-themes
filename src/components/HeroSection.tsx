@@ -15,7 +15,7 @@ const podcasts = [
   { 
     name: 'Acquired.fm', 
     description: 'Custom intro',
-    audioFile: '/who-got-the-truth.mp3',
+    audioFile: '/who-got-the-truth-fixed.mp3',
     image: '/acquired-podcast-jpg.jpeg',
     hideText: true,
     buttonPosition: 'bottom' as const
@@ -31,7 +31,7 @@ const podcasts = [
   { 
     name: 'Not Boring', 
     description: 'Outro theme',
-    audioFile: '/not-boring-outro-theme.mp3',
+    audioFile: '/not-boring-fix.mp3',
     image: '/not-boring-image.jpg',
     hideText: true,
     buttonPosition: 'bottom' as const
