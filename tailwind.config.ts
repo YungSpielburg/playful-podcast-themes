@@ -147,6 +147,7 @@ export default {
 				sans: ['Inter', 'sans-serif'],
 				display: ['Montserrat', 'sans-serif'],
 				cinematic: ['Playfair Display', 'serif'],
+				bebas: ['Bebas Neue', 'sans-serif'],
 			},
 			boxShadow: {
 				'glass': '0 4px 30px rgba(0, 0, 0, 0.3)',
