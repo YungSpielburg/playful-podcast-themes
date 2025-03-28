@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&display=swap');
 
 @tailwind base;
@@ -6,22 +7,22 @@
 
 @layer base {
   :root {
-    --background: 0 0% 20%;
+    --background: 294 77% 8%;
     --foreground: 39 44% 92%;
 
-    --card: 0 0% 25%;
+    --card: 294 77% 13%;
     --card-foreground: 39 44% 92%;
 
-    --popover: 0 0% 25%;
+    --popover: 294 77% 13%;
     --popover-foreground: 39 44% 92%;
 
     --primary: 39 71% 64%;
     --primary-foreground: 0 0% 10%;
 
-    --secondary: 0 0% 30%;
+    --secondary: 294 77% 15%;
     --secondary-foreground: 39 44% 92%;
 
-    --muted: 0 0% 30%;
+    --muted: 294 77% 15%;
     --muted-foreground: 39 44% 86%;
 
     --accent: 331 87% 27%;
@@ -30,8 +31,8 @@
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 39 44% 92%;
 
-    --border: 0 0% 30%;
-    --input: 0 0% 30%;
+    --border: 294 77% 15%;
+    --input: 294 77% 15%;
     --ring: 331 87% 27%;
 
     --radius: 0.75rem;
@@ -46,7 +47,7 @@
   }
 
   body {
-    @apply bg-charcoal text-sand antialiased selection:bg-accent/20;
+    @apply bg-dark-purple text-sand antialiased selection:bg-accent/20;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
   
