@@ -3,6 +3,7 @@ import { motion } from 'framer-motion';
 import { useState } from 'react';
 import AudioPlayer from './AudioPlayer';
 import { useIsMobile } from '@/hooks/use-mobile';
+import { Button } from './ui/button';
 
 const podcasts = [
   { 
@@ -127,6 +128,20 @@ const HeroSection = () => {
               />
             ))}
           </motion.div>
+          
+          {/* Mobile-only Connect button - shown after the audio players */}
+          {isMobile && (
+            <motion.div
+              className="mt-8 flex justify-center"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, delay: 0.4 }}
+            >
+              <a href="#contact" className="btn-primary shadow-neon w-full max-w-[250px]">
+                Connect With Me
+              </a>
+            </motion.div>
+          )}
           
           <motion.div
             className="absolute top-1/4 -right-10 md:-right-20 w-24 h-24 rounded-full bg-sand/30 backdrop-blur-sm animate-float"
