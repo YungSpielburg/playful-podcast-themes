@@ -32,12 +32,12 @@ const ContactSection = () => {
       // Prepare the template parameters
       // Making sure all field names match exactly what EmailJS expects
       const templateParams = {
-        from_name: formData.name,
-        reply_to: formData.email, // Changed to reply_to as it's a common EmailJS parameter
-        email: formData.email,    // Also include as email for backward compatibility
+        name: formData.name,        // Changed to name ({{name}} in the EmailJS template)
+        reply_to: formData.email,   // Changed to reply_to as it's a common EmailJS parameter
+        email: formData.email,      // Also include as email for backward compatibility
         podcast_name: formData.podcast,
         message: formData.message,
-        to_name: 'Lenny',         // Adding recipient name for better email formatting
+        to_name: 'Lenny',           // Adding recipient name for better email formatting
         to_email: 'Lennyskolnik@gmail.com'
       };
       
