@@ -14,7 +14,7 @@ const AboutSection = () => {
           className="max-w-4xl mx-auto text-center mb-16"
         >
           <h2 className="section-title glow-gold">About Yung Spielburg</h2>
-          <p className="section-subtitle">Grammy award-winning producer & songwriter with global impact</p>
+          <p className="section-subtitle"></p>
         </motion.div>
 
         <div className="grid md:grid-cols-2 gap-10 items-center">
