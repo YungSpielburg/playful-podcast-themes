@@ -124,7 +124,7 @@ const PortfolioSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Trusted by the World's <span className="text-coral glow-coral">Top Podcasts</span>
+            Trusted by the World's <span className="text-accent glow-accent">Top Podcasts</span>
           </motion.h2>
           <motion.p 
             className="section-subtitle mx-auto"
