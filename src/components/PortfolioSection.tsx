@@ -1,5 +1,5 @@
 
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Play, Pause } from 'lucide-react';
 
@@ -14,7 +14,7 @@ const clientLogos = [
     name: 'Acquired.fm', 
     description: 'Custom intro music for their tech acquisition analysis',
     highlight: false,
-    audioFile: '/who-got-the-truth.mp3' // Check if this file exists
+    audioFile: '/who-got-the-truth.mp3'
   },
   { 
     name: 'A16Z', 
@@ -26,7 +26,7 @@ const clientLogos = [
     name: 'Not Boring', 
     description: 'Distinctive sound created for Packy McCormick\'s business analysis',
     highlight: false,
-    audioFile: '/not-boring-outro-theme.mp3' // Check if this file exists
+    audioFile: '/not-boring-outro-theme.mp3'
   },
   { 
     name: 'Balaji Srinivasan', 
@@ -42,9 +42,22 @@ const clientLogos = [
   },
 ];
 
+// Function to get fallback audio for clients with problematic audio files
+const getFallbackAudio = (clientName: string): string => {
+  switch(clientName) {
+    case 'Acquired.fm':
+      return '/a16z-short-for-website.mp3'; // Use a16z short audio as fallback
+    case 'Not Boring':
+      return '/a16z-15s-b.mp3'; // Use another a16z audio as fallback
+    default:
+      return '/wet-your-beak.mp3'; // Default fallback
+  }
+};
+
 const PortfolioSection = () => {
   const [playingIndex, setPlayingIndex] = useState<number | null>(null);
   const audioRefs = useRef<(HTMLAudioElement | null)[]>(Array(clientLogos.length).fill(null));
+  const [audioErrors, setAudioErrors] = useState<Record<number, boolean>>({});
 
   const fadeInUpVariants = {
     hidden: { opacity: 0, y: 20 },
@@ -57,6 +70,29 @@ const PortfolioSection = () => {
       }
     })
   };
+
+  useEffect(() => {
+    // Set up error handlers for all audio elements
+    audioRefs.current.forEach((audioRef, index) => {
+      if (audioRef) {
+        const handleError = () => {
+          console.error(`Audio error for ${clientLogos[index].name}: ${clientLogos[index].audioFile}`);
+          setAudioErrors(prev => ({...prev, [index]: true}));
+          
+          // Use fallback audio
+          if (audioRef) {
+            audioRef.src = getFallbackAudio(clientLogos[index].name);
+          }
+        };
+        
+        audioRef.addEventListener('error', handleError);
+        
+        return () => {
+          audioRef.removeEventListener('error', handleError);
+        };
+      }
+    });
+  }, []);
 
   const togglePlayPause = (index: number) => {
     const audioElement = audioRefs.current[index];
@@ -71,8 +107,16 @@ const PortfolioSection = () => {
       }
       
       audioElement.play().catch(error => {
-        console.error("Error playing audio:", error);
+        console.error(`Error playing audio for ${clientLogos[index].name}:`, error);
+        setAudioErrors(prev => ({...prev, [index]: true}));
+        
+        // Try fallback audio
+        audioElement.src = getFallbackAudio(clientLogos[index].name);
+        audioElement.play().catch(fallbackError => {
+          console.error(`Fallback audio error for ${clientLogos[index].name}:`, fallbackError);
+        });
       });
+      
       setPlayingIndex(index);
     }
   };
@@ -150,6 +194,12 @@ const PortfolioSection = () => {
               
               <h3 className="text-xl font-display font-bold mb-2">{client.name}</h3>
               <p className="text-muted-foreground flex-grow">{client.description}</p>
+              
+              {audioErrors[index] && (
+                <div className="mt-2 text-xs text-amber-500">
+                  Using alternative audio track
+                </div>
+              )}
               
               {client.highlight && (
                 <div className="mt-4 pt-4 border-t border-white/10">

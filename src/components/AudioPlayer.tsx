@@ -25,18 +25,67 @@ const AudioPlayer = ({
 }: AudioPlayerProps) => {
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const [error, setError] = useState<string | null>(null);
+  const [loading, setLoading] = useState(true);
+  
+  // Updated list of fallback audio files for specific clients
+  const getFallbackAudio = (clientName: string): string => {
+    switch(clientName) {
+      case 'Acquired.fm':
+        return '/a16z-short-for-website.mp3'; // Use a16z short audio as fallback
+      case 'Not Boring':
+        return '/a16z-15s-b.mp3'; // Use another a16z audio as fallback
+      default:
+        return '/wet-your-beak.mp3'; // Default fallback
+    }
+  };
   
   useEffect(() => {
     // Create or update audio element when audioFile changes
     if (audioRef.current) {
+      setLoading(true);
+      
+      // Add load event listener to check if the audio file is valid
+      const handleCanPlayThrough = () => {
+        setLoading(false);
+        setError(null);
+      };
+      
+      const handleError = () => {
+        console.error(`Audio file error for ${name}: ${audioFile}`);
+        setError('Audio file not available. Using fallback.');
+        
+        // If there's an error loading the audio, use a fallback
+        if (audioRef.current) {
+          audioRef.current.src = getFallbackAudio(name);
+        }
+      };
+      
+      audioRef.current.addEventListener('canplaythrough', handleCanPlayThrough);
+      audioRef.current.addEventListener('error', handleError);
+      
       if (isPlaying) {
         audioRef.current.play().catch(error => {
           console.error(`Error playing audio [${name}] [${audioFile}]:`, error);
           setError(`Could not play audio: ${error.message}`);
+          
+          // Try fallback audio if play fails
+          if (audioRef.current) {
+            audioRef.current.src = getFallbackAudio(name);
+            audioRef.current.play().catch(fallbackError => {
+              console.error(`Fallback audio error for ${name}:`, fallbackError);
+            });
+          }
         });
       } else {
         audioRef.current.pause();
       }
+      
+      return () => {
+        if (audioRef.current) {
+          audioRef.current.removeEventListener('canplaythrough', handleCanPlayThrough);
+          audioRef.current.removeEventListener('error', handleError);
+        }
+      };
     }
   }, [isPlaying, audioFile, name]);
 
@@ -49,6 +98,14 @@ const AudioPlayer = ({
         audioRef.current.play().catch(error => {
           console.error(`Error playing audio [${name}] [${audioFile}]:`, error);
           setError(`Could not play audio: ${error.message}`);
+          
+          // Try fallback audio if play fails
+          if (audioRef.current) {
+            audioRef.current.src = getFallbackAudio(name);
+            audioRef.current.play().catch(fallbackError => {
+              console.error(`Fallback audio error for ${name}:`, fallbackError);
+            });
+          }
         });
       }
       onTogglePlay();
@@ -92,7 +149,9 @@ const AudioPlayer = ({
               onClick={handlePlayPause}
               className="w-10 h-10 rounded-full flex items-center justify-center cursor-pointer hover:scale-105 transition-transform shadow-neon bg-black/30 border-2 border-black/40 hover:border-black/70 ml-2 mb-1"
             >
-              {isPlaying ? (
+              {loading ? (
+                <div className="w-4 h-4 border-2 border-white border-t-transparent rounded-full animate-spin"></div>
+              ) : isPlaying ? (
                 <Pause className="text-white" size={16} />
               ) : (
                 <Play className="text-white" size={16} />
