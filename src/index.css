@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 20 3% 15%;
+    --background: 220 15% 13%;
     --foreground: 0 0% 95%;
 
-    --card: 20 3% 20%;
+    --card: 220 15% 18%;
     --card-foreground: 0 0% 95%;
 
-    --popover: 20 3% 20%;
+    --popover: 220 15% 18%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 20 44% 82%;
-    --primary-foreground: 20 3% 15%;
+    --primary: 43 57% 52%;
+    --primary-foreground: 0 0% 10%;
 
-    --secondary: 20 3% 24%;
+    --secondary: 220 15% 22%;
     --secondary-foreground: 0 0% 95%;
 
-    --muted: 20 3% 24%;
+    --muted: 220 15% 22%;
     --muted-foreground: 0 0% 70%;
 
-    --accent: 20 44% 82%;
-    --accent-foreground: 20 3% 15%;
+    --accent: 43 57% 52%;
+    --accent-foreground: 0 0% 10%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 98%;
 
-    --border: 20 3% 24%;
-    --input: 20 3% 24%;
-    --ring: 20 44% 82%;
+    --border: 220 15% 22%;
+    --input: 220 15% 22%;
+    --ring: 43 57% 52%;
 
     --radius: 0.75rem;
   }
@@ -47,12 +47,12 @@
   }
 
   body {
-    @apply bg-background text-foreground antialiased selection:bg-primary/20;
+    @apply bg-background text-foreground antialiased selection:bg-gold/20;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
   
   ::selection {
-    @apply bg-primary/20;
+    @apply bg-gold/20;
   }
 }
 
@@ -70,7 +70,7 @@
   }
   
   .audio-wave-bar {
-    @apply w-1 bg-primary rounded-full;
+    @apply w-1 bg-gold rounded-full;
   }
   
   .neon-glow {
@@ -90,7 +90,7 @@
   }
   
   .btn-primary {
-    @apply bg-primary text-primary-foreground rounded-full px-6 py-3 font-medium transition-all hover:bg-primary/90 hover:shadow-md;
+    @apply bg-gold text-black rounded-full px-6 py-3 font-medium transition-all hover:bg-gold-dark hover:shadow-md;
   }
   
   .btn-secondary {
@@ -98,7 +98,7 @@
   }
   
   .navlink {
-    @apply relative text-foreground/80 hover:text-foreground transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-primary after:transition-all hover:after:w-full;
+    @apply relative text-foreground/80 hover:text-foreground transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-gold after:transition-all hover:after:w-full;
   }
   
   .client-logo {
@@ -106,7 +106,7 @@
   }
   
   .artistic-border {
-    @apply border-2 border-primary/30 hover:border-primary/60 transition-all duration-300;
+    @apply border-2 border-gold/30 hover:border-gold/60 transition-all duration-300;
   }
   
   .artistic-card {
@@ -114,7 +114,7 @@
   }
   
   .accent-highlight {
-    @apply text-primary font-semibold;
+    @apply text-gold font-semibold;
   }
 }
 
@@ -129,11 +129,11 @@
   }
   
   .glow-accent {
-    text-shadow: 0 0 4px theme('colors.primary/30');
+    text-shadow: 0 0 4px theme('colors.gold/30');
   }
   
-  .glow-primary {
-    text-shadow: 0 0 4px theme('colors.primary/30');
+  .glow-gold {
+    text-shadow: 0 0 4px theme('colors.gold/30');
   }
   
   .glow-coral {
