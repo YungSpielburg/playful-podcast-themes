@@ -1,4 +1,3 @@
-
 import type { Config } from "tailwindcss";
 
 export default {
@@ -29,6 +28,7 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
+				'dark-bg': '#0e1111',
 				'dark-purple': '#26061c',
 				sand: '#F6F1E2',
 				charcoal: '#333333',
