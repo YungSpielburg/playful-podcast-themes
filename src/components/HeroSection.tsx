@@ -32,7 +32,7 @@ const podcasts = [
     name: 'The Happy Dentist', 
     description: 'Theme song',
     audioFile: '/happy-dentist.mp3',
-    image: '/happy-dentist-image.jpeg',
+    image: '/happy-dentist-image-2.jpeg',
     hideText: true,
     buttonPosition: 'bottom' as const
   },
