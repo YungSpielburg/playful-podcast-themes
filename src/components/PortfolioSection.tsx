@@ -40,6 +40,24 @@ const clientLogos = [
     highlight: false,
     audioFile: '/VC Consumer Bumper 1.0.wav'
   },
+  { 
+    name: 'The Happy Dentist', 
+    description: 'A radical song for a radical podcast on dentistry, believe it or not!',
+    highlight: false,
+    audioFile: '/happy-dentist.mp3'
+  },
+  { 
+    name: 'Cloud Poker Night', 
+    description: 'The who\'s who place for online poker in tech',
+    highlight: false,
+    audioFile: '/nightfall.mp3'
+  },
+  { 
+    name: 'Venture Coinist', 
+    description: 'As the song says, "We Going Up!"',
+    highlight: false,
+    audioFile: '/we-going-up.mp3'
+  },
 ];
 
 const PortfolioSection = () => {
