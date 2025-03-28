@@ -4,28 +4,28 @@ import { Music, FileAudio2, Headphones, MusicIcon } from 'lucide-react';
 const services = [
   {
     title: "Audio Brand Definition",
-    description: "Who would you have as the musical guest at a live taping of your show? What values connect everyone in the audience? Questions like these will help us uncover your sound.",
+    description: "Who’s your dream musical guest for a live taping of your show? What shared values bring your audience together? Questions like these help us define your sonic identity and uncover the sound that feels unmistakably you.",
     icon: (
       <Headphones className="w-6 h-6" />
     )
   },
   {
     title: "Main Intro & Outro Themes",
-    description: "Signature podcast intro music and an extended outro theme for a pavlovian effect of anticipation and excitement!",
+    description: "Signature podcast intro music and an extended outro theme designed for anticipation and excitement – your own pavlovian cue!",
     icon: (
       <Music className="w-6 h-6" />
     )
   },
   {
     title: "Instrumental & Acapella Versions",
-    description: "Variations of your theme music including full instrumental versions, acapella versions, and stems for maximum flexibility.",
+    description: "Flexible variations of your theme, including full instrumental tracks, a cappella versions, and individual stems—perfect for mixing, remixing, or adapting to different formats..",
     icon: (
       <MusicIcon className="w-6 h-6" />
     )
   },
   {
     title: "Transition Stings & Audio Elements",
-    description: "Short audio stings and transition elements built from your theme for a cohesive listening experience.",
+    description: "Custom transition stings and audio cues derived from your theme music, ensuring a consistent and cohesive listening experience throughout your show.",
     icon: (
       <FileAudio2 className="w-6 h-6" />
     )
