@@ -54,11 +54,11 @@ const HeroSection = () => {
   return (
     <section className="relative min-h-screen pt-20 pb-10 flex items-center overflow-hidden">
       <div className="absolute inset-0 -z-10">
-        {/* Enhanced background elements with softer gradients that match the new deep blue background */}
+        {/* Enhanced background elements with softer gradients that match the very deep blue background */}
         <div className="absolute top-20 right-0 w-96 h-96 bg-red/20 rounded-full filter blur-3xl"></div>
         <div className="absolute bottom-10 left-10 w-72 h-72 bg-accent/20 rounded-full filter blur-3xl"></div>
         
-        {/* New soft red bursts with adjusted opacity to work with the new deep blue background */}
+        {/* New soft red bursts with adjusted opacity to work with the very deep blue background */}
         <div className="absolute top-1/4 left-1/4 w-80 h-80 bg-red/15 rounded-full filter blur-3xl"></div>
         <div className="absolute bottom-1/3 right-1/4 w-64 h-64 bg-coral/15 rounded-full filter blur-3xl"></div>
       </div>
