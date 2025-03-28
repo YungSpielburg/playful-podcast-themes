@@ -31,10 +31,10 @@ export default {
 				foreground: 'hsl(var(--foreground))',
 				sand: '#F6F1E2',
 				charcoal: '#2F292A',
-				gold: {
-					light: '#D4AF37',
-					DEFAULT: '#CFB53B',
-					dark: '#996515',
+				red: {
+					light: '#E56B5C',
+					DEFAULT: '#CD422D',
+					dark: '#A93524',
 				},
 				coral: {
 					light: '#FF9A8B',
