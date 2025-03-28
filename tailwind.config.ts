@@ -29,15 +29,15 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
-				gold: {
-					light: '#D4AF37',
-					DEFAULT: '#CFB53B',
-					dark: '#996515',
+				primary: {
+					light: '#F7DDC7',
+					DEFAULT: '#F2CDB0',
+					dark: '#E5B995',
 				},
 				coral: {
-					light: '#FF9A8B',
-					DEFAULT: '#FF6B6B',
-					dark: '#D63447',
+					light: '#6B0C17',
+					DEFAULT: '#58060D',
+					dark: '#450509',
 				},
 				accent: {
 					purple: '#c084fc',
@@ -149,8 +149,8 @@ export default {
 			},
 			boxShadow: {
 				'glass': '0 4px 30px rgba(0, 0, 0, 0.3)',
-				'neon': '0 0 8px rgba(207, 181, 59, 0.5), 0 0 15px rgba(207, 181, 59, 0.3)',
-				'neon-accent': '0 0 8px rgba(207, 181, 59, 0.5), 0 0 15px rgba(207, 181, 59, 0.3)',
+				'neon': '0 0 8px rgba(242, 205, 176, 0.5), 0 0 15px rgba(242, 205, 176, 0.3)',
+				'neon-accent': '0 0 8px rgba(242, 205, 176, 0.5), 0 0 15px rgba(242, 205, 176, 0.3)',
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
