@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&family=Instrument+Serif:wght@400;700&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,700;1,400;1,700&family=Bebas+Neue&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -53,10 +54,6 @@
   ::selection {
     @apply bg-red/20;
   }
-
-  p {
-    @apply font-instrument;
-  }
 }
 
 @layer components {
@@ -89,19 +86,19 @@
   }
   
   .section-subtitle {
-    @apply text-lg text-muted-foreground mb-12 max-w-2xl font-instrument;
+    @apply text-lg text-muted-foreground mb-12 max-w-2xl;
   }
   
   .btn-primary {
-    @apply bg-red text-sand rounded-full px-6 py-3 font-medium transition-all hover:bg-red-light hover:shadow-lg font-instrument;
+    @apply bg-red text-sand rounded-full px-6 py-3 font-medium transition-all hover:bg-red-light hover:shadow-lg;
   }
   
   .btn-secondary {
-    @apply bg-background/80 backdrop-blur-md text-sand rounded-full px-6 py-3 font-medium transition-all border border-border hover:bg-gray-700 hover:shadow-lg font-instrument;
+    @apply bg-background/80 backdrop-blur-md text-sand rounded-full px-6 py-3 font-medium transition-all border border-border hover:bg-gray-700 hover:shadow-lg;
   }
   
   .navlink {
-    @apply relative text-foreground/80 hover:text-foreground transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-red after:transition-all hover:after:w-full font-instrument;
+    @apply relative text-foreground/80 hover:text-foreground transition-colors duration-200 after:absolute after:bottom-0 after:left-0 after:h-[2px] after:w-0 after:bg-red after:transition-all hover:after:w-full;
   }
   
   .client-logo {

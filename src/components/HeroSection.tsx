@@ -74,12 +74,12 @@ const HeroSection = () => {
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <span className="whitespace-nowrap">Give Your Podcast</span><br />
-            A <span className="font-instrument font-bold text-accent glow-accent">Signature</span><br />
-            <span className="font-instrument font-bold text-accent glow-accent">Sound</span>
+            A <span className="font-anton text-accent glow-accent">Signature</span><br />
+            <span className="text-accent glow-accent">Sound</span>
           </motion.h1>
           
           <motion.p 
-            className="font-instrument text-lg md:text-xl mb-4 text-muted-foreground max-w-xl"
+            className="font-gotham text-lg md:text-xl mb-4 text-muted-foreground max-w-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -88,7 +88,7 @@ const HeroSection = () => {
           </motion.p>
           
           <motion.p 
-            className="font-instrument text-lg md:text-xl mb-8 text-muted-foreground max-w-xl"
+            className="font-gotham text-lg md:text-xl mb-8 text-muted-foreground max-w-xl"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.25 }}
@@ -102,10 +102,10 @@ const HeroSection = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <a href="#contact" className="font-instrument btn-primary shadow-neon">
+            <a href="#contact" className="font-gotham btn-primary shadow-neon">
               Connect With Me
             </a>
-            <a href="#portfolio" className="font-instrument btn-secondary">
+            <a href="#portfolio" className="font-gotham btn-secondary">
               Hear My Work
             </a>
           </motion.div>

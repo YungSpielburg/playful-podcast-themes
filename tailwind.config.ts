@@ -154,7 +154,6 @@ export default {
 				bangers: ['Bangers', 'cursive'],
 				bodoni: ['Bodoni Moda', 'serif'],
 				anton: ['Anton', 'sans-serif'],
-				instrument: ['Instrument Serif', 'serif'],
 			},
 			boxShadow: {
 				'glass': '0 4px 30px rgba(0, 0, 0, 0.3)',

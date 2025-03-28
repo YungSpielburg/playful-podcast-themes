@@ -36,10 +36,10 @@ const Navbar = () => {
         </a>
         
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#portfolio" className="navlink font-instrument">Portfolio</a>
-          <a href="#services" className="navlink font-instrument">Services</a>
-          <a href="#about" className="navlink font-instrument">About</a>
-          <a href="#contact" className="btn-primary font-instrument">Connect With Me</a>
+          <a href="#portfolio" className="navlink">Portfolio</a>
+          <a href="#services" className="navlink">Services</a>
+          <a href="#about" className="navlink">About</a>
+          <a href="#contact" className="btn-primary">Connect With Me</a>
         </div>
         
         <button className="md:hidden text-foreground">
