@@ -11,7 +11,7 @@ const ContactFormHeader = () => {
         viewport={{ once: true }}
         transition={{ duration: 0.5 }}
       >
-        Let's Create Your <span className="text-coral">Signature Sound</span>
+        Let's Create Your <span className="text-accent">Signature Sound</span>
       </motion.h2>
       <motion.p
         className="mt-4 text-muted-foreground"
