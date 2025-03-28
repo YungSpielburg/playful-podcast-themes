@@ -31,14 +31,14 @@ const AudioPlayer = ({
     if (audioRef.current) {
       if (isPlaying) {
         audioRef.current.play().catch(error => {
-          console.error("Error playing audio:", error);
+          console.error(`Error playing audio [${name}] [${audioFile}]:`, error);
           setError(`Could not play audio: ${error.message}`);
         });
       } else {
         audioRef.current.pause();
       }
     }
-  }, [isPlaying, audioFile]);
+  }, [isPlaying, audioFile, name]);
 
   const handlePlayPause = () => {
     if (audioRef.current) {
@@ -47,7 +47,7 @@ const AudioPlayer = ({
       } else {
         setError(null); // Clear previous errors
         audioRef.current.play().catch(error => {
-          console.error("Error playing audio:", error);
+          console.error(`Error playing audio [${name}] [${audioFile}]:`, error);
           setError(`Could not play audio: ${error.message}`);
         });
       }
@@ -58,12 +58,12 @@ const AudioPlayer = ({
   // Log the image and audio file paths for debugging
   useEffect(() => {
     if (image) {
-      console.log(`Loading image: ${image}`);
+      console.log(`Loading image for ${name}: ${image}`);
     }
     if (audioFile) {
-      console.log(`Loading audio: ${audioFile}`);
+      console.log(`Loading audio for ${name}: ${audioFile}`);
     }
-  }, [image, audioFile]);
+  }, [image, audioFile, name]);
 
   return (
     <div

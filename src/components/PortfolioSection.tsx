@@ -14,7 +14,7 @@ const clientLogos = [
     name: 'Acquired.fm', 
     description: 'Custom intro music for their tech acquisition analysis',
     highlight: false,
-    audioFile: '/who-got-the-truth.mp3'
+    audioFile: '/who-got-the-truth.mp3' // Check if this file exists
   },
   { 
     name: 'A16Z', 
@@ -26,7 +26,7 @@ const clientLogos = [
     name: 'Not Boring', 
     description: 'Distinctive sound created for Packy McCormick\'s business analysis',
     highlight: false,
-    audioFile: '/not-boring-outro-theme.mp3'
+    audioFile: '/not-boring-outro-theme.mp3' // Check if this file exists
   },
   { 
     name: 'Balaji Srinivasan', 
