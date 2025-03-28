@@ -103,7 +103,7 @@ const ContactForm = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-white/80 backdrop-blur-sm border border-white/10 text-charcoal placeholder:text-charcoal/60 focus:outline-none focus:ring-2 focus:ring-red/50"
+                  className="w-full px-4 py-3 rounded-lg bg-charcoal/80 backdrop-blur-sm border border-white/10 text-sand placeholder:text-sand/60 focus:outline-none focus:ring-2 focus:ring-red/50"
                   placeholder="John Smith"
                 />
               </div>
@@ -116,7 +116,7 @@ const ContactForm = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-white/80 backdrop-blur-sm border border-white/10 text-charcoal placeholder:text-charcoal/60 focus:outline-none focus:ring-2 focus:ring-red/50"
+                  className="w-full px-4 py-3 rounded-lg bg-charcoal/80 backdrop-blur-sm border border-white/10 text-sand placeholder:text-sand/60 focus:outline-none focus:ring-2 focus:ring-red/50"
                   placeholder="john@example.com"
                 />
               </div>
@@ -131,7 +131,7 @@ const ContactForm = () => {
                 value={formData.podcast}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-lg bg-white/80 backdrop-blur-sm border border-white/10 text-charcoal placeholder:text-charcoal/60 focus:outline-none focus:ring-2 focus:ring-red/50"
+                className="w-full px-4 py-3 rounded-lg bg-charcoal/80 backdrop-blur-sm border border-white/10 text-sand placeholder:text-sand/60 focus:outline-none focus:ring-2 focus:ring-red/50"
                 placeholder="Your Amazing Podcast"
               />
             </div>
@@ -144,7 +144,7 @@ const ContactForm = () => {
                 value={formData.message}
                 onChange={handleChange}
                 rows={4}
-                className="w-full px-4 py-3 rounded-lg bg-white/80 backdrop-blur-sm border border-white/10 text-charcoal placeholder:text-charcoal/60 focus:outline-none focus:ring-2 focus:ring-red/50"
+                className="w-full px-4 py-3 rounded-lg bg-charcoal/80 backdrop-blur-sm border border-white/10 text-sand placeholder:text-sand/60 focus:outline-none focus:ring-2 focus:ring-red/50"
                 placeholder="Tell me about your podcast and what kind of sound you're looking for..."
               ></textarea>
             </div>
