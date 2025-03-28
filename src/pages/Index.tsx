@@ -62,11 +62,6 @@ const Index = () => {
         <ContactSection />
         <Footer />
       </motion.div>
-      
-      {/* Decorative Elements */}
-      <div className="fixed top-1/4 right-10 w-2 h-2 rounded-full bg-red/50 animate-sparkle-1 opacity-50"></div>
-      <div className="fixed top-1/3 left-20 w-3 h-3 rounded-full bg-red/50 animate-sparkle-2 opacity-50"></div>
-      <div className="fixed bottom-1/4 right-20 w-2 h-2 rounded-full bg-red/50 animate-sparkle-3 opacity-50"></div>
     </div>
   );
 };
