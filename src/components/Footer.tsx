@@ -20,7 +20,7 @@ const Footer = () => {
               </div>
               <span className="text-lg font-display font-semibold">Yung Spielburg</span>
             </div>
-            <p className="text-sm text-muted-foreground mt-2">The #1 Podcast Theme Producer Worldwide</p>
+            <p className="text-sm text-muted-foreground mt-2">The #1 Podcast Intro Music Producer</p>
           </div>
           
           <div className="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-6">
