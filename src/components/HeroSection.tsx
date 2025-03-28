@@ -29,10 +29,10 @@ const podcasts = [
     buttonPosition: 'bottom' as const
   },
   { 
-    name: 'Not Boring', 
-    description: 'Outro theme',
-    audioFile: '/not-boring-fix.mp3',
-    image: '/not-boring-image.jpg',
+    name: 'The Happy Dentist', 
+    description: 'Theme song',
+    audioFile: '/happy-dentist.mp3',
+    image: '/lovable-uploads/e42cad4d-f67b-43c7-aa01-2de7f44cc60d.png',
     hideText: true,
     buttonPosition: 'bottom' as const
   },
