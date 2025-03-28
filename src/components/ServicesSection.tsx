@@ -49,7 +49,7 @@ const ServicesSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5 }}
           >
-            Complete <span className="text-accent glow-accent">Audio Branding</span> for Podcasters
+            <span className="text-accent glow-accent">Audio Branding</span> for Podcasters
           </motion.h2>
           <motion.p 
             className="section-subtitle mx-auto"
@@ -58,7 +58,7 @@ const ServicesSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
-            From defining your audio brand to creating a complete package of custom music elements that elevate your podcast's identity.
+            From defining your audio brand to creating a complete package of custom music elements that reflect your podcast's identity.
           </motion.p>
         </div>
         
