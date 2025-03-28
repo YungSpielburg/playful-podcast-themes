@@ -153,8 +153,8 @@ export default {
 			},
 			boxShadow: {
 				'glass': '0 4px 30px rgba(0, 0, 0, 0.3)',
-				'neon': '0 0 8px rgba(207, 181, 59, 0.5), 0 0 15px rgba(207, 181, 59, 0.3)',
-				'neon-accent': '0 0 8px rgba(207, 181, 59, 0.5), 0 0 15px rgba(207, 181, 59, 0.3)',
+				'neon': '0 0 8px rgba(205, 66, 45, 0.5), 0 0 15px rgba(205, 66, 45, 0.3)',
+				'neon-accent': '0 0 8px rgba(205, 66, 45, 0.5), 0 0 15px rgba(205, 66, 45, 0.3)',
 			},
 			backgroundImage: {
 				'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
