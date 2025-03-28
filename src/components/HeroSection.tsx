@@ -68,13 +68,13 @@ const HeroSection = () => {
           {/* The "#1 Podcast Theme Producer" button has been removed */}
           
           <motion.h1 
-            className="font-bangers text-5xl md:text-6xl lg:text-7xl tracking-wide mb-6"
+            className="font-bodoni text-5xl md:text-6xl lg:text-7xl tracking-wide mb-6"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
           >
             <span className="whitespace-nowrap">Give Your Podcast</span><br />
-            A <span className="font-bangers text-accent glow-accent">Signature</span><br />
+            A <span className="font-bodoni text-accent glow-accent">Signature</span><br />
             <span className="text-accent glow-accent">Sound</span>
           </motion.h1>
           
