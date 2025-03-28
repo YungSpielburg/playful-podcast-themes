@@ -6,7 +6,7 @@ import emailjs from 'emailjs-com';
 
 // EmailJS service configuration
 // You'll need to sign up for EmailJS and configure these values
-const EMAILJS_SERVICE_ID = 'service_placeholder'; // Replace with your actual service ID
+const EMAILJS_SERVICE_ID = 'service_8qbgl3r'; // Replace with your actual service ID
 const EMAILJS_TEMPLATE_ID = 'template_placeholder'; // Replace with your actual template ID
 const EMAILJS_USER_ID = 'public_key_placeholder'; // Replace with your actual user ID
 
