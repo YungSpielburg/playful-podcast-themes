@@ -1,3 +1,4 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;500;600;700;800&display=swap');
 
 @tailwind base;
@@ -6,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 22 12% 15%; /* #2c2725 */
-    --foreground: 28 40% 82%; /* #f2cdb0 */
+    --background: 220 15% 13%;
+    --foreground: 0 0% 95%;
 
-    --card: 23 13% 20%; /* slightly lighter than background */
-    --card-foreground: 28 40% 82%; /* #f2cdb0 */
+    --card: 220 15% 18%;
+    --card-foreground: 0 0% 95%;
 
-    --popover: 23 13% 20%;
-    --popover-foreground: 28 40% 82%;
+    --popover: 220 15% 18%;
+    --popover-foreground: 0 0% 95%;
 
-    --primary: 28 40% 82%; /* #f2cdb0 */
-    --primary-foreground: 22 12% 15%; /* #2c2725 */
+    --primary: 43 57% 52%;
+    --primary-foreground: 0 0% 10%;
 
-    --secondary: 193 30% 21%; /* #253e44 */
-    --secondary-foreground: 28 40% 82%; /* #f2cdb0 */
+    --secondary: 220 15% 22%;
+    --secondary-foreground: 0 0% 95%;
 
-    --muted: 193 30% 21%; /* #253e44 */
-    --muted-foreground: 28 40% 70%; /* lighter version of #f2cdb0 */
+    --muted: 220 15% 22%;
+    --muted-foreground: 0 0% 70%;
 
-    --accent: 358 86% 19%; /* #58060d */
-    --accent-foreground: 28 40% 82%; /* #f2cdb0 */
+    --accent: 43 57% 52%;
+    --accent-foreground: 0 0% 10%;
 
-    --destructive: 358 86% 19%; /* #58060d */
-    --destructive-foreground: 28 40% 82%; /* #f2cdb0 */
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 193 30% 21%; /* #253e44 */
-    --input: 193 30% 21%; /* #253e44 */
-    --ring: 28 40% 82%; /* #f2cdb0 */
+    --border: 220 15% 22%;
+    --input: 220 15% 22%;
+    --ring: 43 57% 52%;
 
     --radius: 0.75rem;
   }

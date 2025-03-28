@@ -30,18 +30,18 @@ export default {
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
 				gold: {
-					light: '#f2cdb0',
-					DEFAULT: '#f2cdb0',
-					dark: '#d3af93',
+					light: '#D4AF37',
+					DEFAULT: '#CFB53B',
+					dark: '#996515',
 				},
 				coral: {
-					light: '#58060d',
-					DEFAULT: '#58060d',
-					dark: '#420509',
+					light: '#FF9A8B',
+					DEFAULT: '#FF6B6B',
+					dark: '#D63447',
 				},
 				accent: {
-					purple: '#253e44',
-					pink: '#58060d',
+					purple: '#c084fc',
+					pink: '#D946EF',
 					DEFAULT: 'hsl(var(--accent))',
 					foreground: 'hsl(var(--accent-foreground))'
 				},
