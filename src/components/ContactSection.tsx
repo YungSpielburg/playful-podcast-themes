@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useToast } from '@/hooks/use-toast';
@@ -5,7 +6,7 @@ import emailjs from 'emailjs-com';
 
 // EmailJS service configuration
 const EMAILJS_SERVICE_ID = 'service_8qbgl3r'; 
-const EMAILJS_TEMPLATE_ID = 'template_placeholder'; // Replace with your actual template ID
+const EMAILJS_TEMPLATE_ID = 'template_fu1taph'; // Updated template ID
 const EMAILJS_USER_ID = 'fGW3QoXQobtK5laDC'; 
 
 const ContactSection = () => {
