@@ -91,7 +91,7 @@ const ContactForm = () => {
       transition={{ duration: 0.5, delay: 0.2 }}
     >
       <div className="p-2">
-        <div className="bg-gradient-to-br from-gold/80 to-gold-dark/90 rounded-lg p-8">
+        <div className="bg-gradient-to-br from-gold to-gold-dark rounded-lg p-8">
           <form onSubmit={handleSubmit} className="space-y-6">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
@@ -103,7 +103,7 @@ const ContactForm = () => {
                   value={formData.name}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-charcoal/80 backdrop-blur-sm border border-white/10 text-sand placeholder:text-sand/60 focus:outline-none focus:ring-2 focus:ring-gold/50"
+                  className="w-full px-4 py-3 rounded-lg bg-charcoal/90 backdrop-blur-sm border border-white/20 text-sand placeholder:text-sand/60 focus:outline-none focus:ring-2 focus:ring-gold/50"
                   placeholder="John Smith"
                 />
               </div>
@@ -116,7 +116,7 @@ const ContactForm = () => {
                   value={formData.email}
                   onChange={handleChange}
                   required
-                  className="w-full px-4 py-3 rounded-lg bg-charcoal/80 backdrop-blur-sm border border-white/10 text-sand placeholder:text-sand/60 focus:outline-none focus:ring-2 focus:ring-gold/50"
+                  className="w-full px-4 py-3 rounded-lg bg-charcoal/90 backdrop-blur-sm border border-white/20 text-sand placeholder:text-sand/60 focus:outline-none focus:ring-2 focus:ring-gold/50"
                   placeholder="john@example.com"
                 />
               </div>
@@ -131,7 +131,7 @@ const ContactForm = () => {
                 value={formData.podcast}
                 onChange={handleChange}
                 required
-                className="w-full px-4 py-3 rounded-lg bg-charcoal/80 backdrop-blur-sm border border-white/10 text-sand placeholder:text-sand/60 focus:outline-none focus:ring-2 focus:ring-gold/50"
+                className="w-full px-4 py-3 rounded-lg bg-charcoal/90 backdrop-blur-sm border border-white/20 text-sand placeholder:text-sand/60 focus:outline-none focus:ring-2 focus:ring-gold/50"
                 placeholder="Your Amazing Podcast"
               />
             </div>
@@ -144,7 +144,7 @@ const ContactForm = () => {
                 value={formData.message}
                 onChange={handleChange}
                 rows={4}
-                className="w-full px-4 py-3 rounded-lg bg-charcoal/80 backdrop-blur-sm border border-white/10 text-sand placeholder:text-sand/60 focus:outline-none focus:ring-2 focus:ring-gold/50"
+                className="w-full px-4 py-3 rounded-lg bg-charcoal/90 backdrop-blur-sm border border-white/20 text-sand placeholder:text-sand/60 focus:outline-none focus:ring-2 focus:ring-gold/50"
                 placeholder="Tell me about your podcast and what kind of sound you're looking for..."
               ></textarea>
             </div>
