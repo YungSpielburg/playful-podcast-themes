@@ -1,4 +1,3 @@
-
 import { motion } from 'framer-motion';
 import { Music, FileAudio2, Headphones, MusicIcon } from 'lucide-react';
 
@@ -35,7 +34,7 @@ const services = [
 
 const ServicesSection = () => {
   return (
-    <section id="services" className="py-20 md:py-32 bg-secondary/30 relative">
+    <section id="services" className="py-12 md:py-16 bg-secondary/30 relative">
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-0 left-0 w-full h-20 bg-gradient-to-b from-background to-transparent"></div>
         <div className="absolute bottom-0 left-0 w-full h-20 bg-gradient-to-t from-background to-transparent"></div>

@@ -1,9 +1,7 @@
-
 import { useState, useRef } from 'react';
 import { motion } from 'framer-motion';
 import { Play, Pause } from 'lucide-react';
 
-// Updated client logos with audio file paths
 const clientLogos = [
   { 
     name: 'All In Podcast', 
@@ -64,16 +62,13 @@ const PortfolioSection = () => {
     if (!audioElement) return;
 
     if (playingIndex === index) {
-      // Pause the currently playing audio
       audioElement.pause();
       setPlayingIndex(null);
     } else {
-      // Pause any currently playing audio
       if (playingIndex !== null && audioRefs.current[playingIndex]) {
         audioRefs.current[playingIndex]?.pause();
       }
       
-      // Play the selected audio
       audioElement.play().catch(error => {
         console.error("Error playing audio:", error);
       });
@@ -81,19 +76,17 @@ const PortfolioSection = () => {
     }
   };
 
-  // Handle audio ended event
   const handleAudioEnded = () => {
     setPlayingIndex(null);
   };
 
   return (
-    <section id="portfolio" className="py-10 md:py-16 relative overflow-hidden">
+    <section id="portfolio" className="py-10 md:py-12 relative overflow-hidden">
       <div className="absolute inset-0 -z-10">
         <div className="absolute top-40 left-20 w-64 h-64 bg-coral/10 rounded-full filter blur-3xl"></div>
         <div className="absolute bottom-20 right-20 w-96 h-96 bg-accent/10 rounded-full filter blur-3xl"></div>
       </div>
       
-      {/* Create audio elements for each client */}
       {clientLogos.map((client, index) => (
         <audio 
           key={`audio-${index}`}

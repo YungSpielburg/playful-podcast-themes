@@ -1,10 +1,9 @@
-
 import { motion } from 'framer-motion';
 import { Award, MusicIcon, Radio, Tv, Briefcase } from 'lucide-react';
 
 const AboutSection = () => {
   return (
-    <section id="about" className="py-20 relative">
+    <section id="about" className="py-12 relative">
       <div className="section-container">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
