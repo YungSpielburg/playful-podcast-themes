@@ -7,33 +7,33 @@
 
 @layer base {
   :root {
-    --background: 153 30% 10%;
-    --foreground: 300 9% 86%;
+    --background: 344 6% 17%;
+    --foreground: 39 44% 92%;
 
-    --card: 153 30% 13%;
-    --card-foreground: 300 9% 86%;
+    --card: 344 6% 20%;
+    --card-foreground: 39 44% 92%;
 
-    --popover: 153 30% 13%;
-    --popover-foreground: 300 9% 86%;
+    --popover: 344 6% 20%;
+    --popover-foreground: 39 44% 92%;
 
-    --primary: 242 68% 46%;
-    --primary-foreground: 300 9% 86%;
+    --primary: 9 64% 49%;
+    --primary-foreground: 39 44% 92%;
 
-    --secondary: 153 30% 18%;
-    --secondary-foreground: 300 9% 86%;
+    --secondary: 344 6% 25%;
+    --secondary-foreground: 39 44% 92%;
 
-    --muted: 153 30% 18%;
-    --muted-foreground: 300 9% 80%;
+    --muted: 344 6% 25%;
+    --muted-foreground: 39 44% 86%;
 
-    --accent: 242 68% 46%;
-    --accent-foreground: 300 9% 86%;
+    --accent: 9 64% 49%;
+    --accent-foreground: 39 44% 92%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 300 9% 86%;
+    --destructive-foreground: 39 44% 92%;
 
-    --border: 153 30% 18%;
-    --input: 153 30% 18%;
-    --ring: 242 68% 46%;
+    --border: 344 6% 25%;
+    --input: 344 6% 25%;
+    --ring: 9 64% 49%;
 
     --radius: 0.75rem;
   }
@@ -47,12 +47,12 @@
   }
 
   body {
-    @apply bg-deep-green text-light-gray antialiased selection:bg-indigo/20;
+    @apply bg-charcoal text-sand antialiased selection:bg-red/20;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
   
   ::selection {
-    @apply bg-indigo/20;
+    @apply bg-red/20;
   }
 }
 

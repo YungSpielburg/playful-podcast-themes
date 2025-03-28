@@ -29,12 +29,12 @@ export default {
 				ring: 'hsl(var(--ring))',
 				background: 'hsl(var(--background))',
 				foreground: 'hsl(var(--foreground))',
-				'deep-green': '#11231c',
-				'light-gray': '#dad7dc',
-				'indigo': {
-					light: '#403AD0',
-					DEFAULT: '#2e27c3',
-					dark: '#251FAF',
+				sand: '#F6F1E2',
+				charcoal: '#2F292A',
+				red: {
+					light: '#E56B5C',
+					DEFAULT: '#CD422D',
+					dark: '#A93524',
 				},
 				coral: {
 					light: '#FF9A8B',
