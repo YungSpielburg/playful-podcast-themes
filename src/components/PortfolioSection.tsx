@@ -32,13 +32,13 @@ const clientLogos = [
     name: 'Balaji Srinivasan', 
     description: 'Unique audio identity for the renowned tech philosopher',
     highlight: false,
-    audioFile: '/the network state for website.mp3'
+    audioFile: '/network-state.mp3'
   },
   { 
     name: 'ConsumerVC', 
     description: 'Crafted the perfect sound for consumer investment insights',
     highlight: false,
-    audioFile: '/VC Consumer Bumper 1.0.wav'
+    audioFile: '/consumer-vc.mp3'
   },
   { 
     name: 'The Happy Dentist', 
