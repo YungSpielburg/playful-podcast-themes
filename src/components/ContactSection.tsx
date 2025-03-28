@@ -2,6 +2,13 @@
 import { useState } from 'react';
 import { motion } from 'framer-motion';
 import { useToast } from '@/hooks/use-toast';
+import emailjs from 'emailjs-com';
+
+// EmailJS service configuration
+// You'll need to sign up for EmailJS and configure these values
+const EMAILJS_SERVICE_ID = 'service_placeholder'; // Replace with your actual service ID
+const EMAILJS_TEMPLATE_ID = 'template_placeholder'; // Replace with your actual template ID
+const EMAILJS_USER_ID = 'public_key_placeholder'; // Replace with your actual user ID
 
 const ContactSection = () => {
   const { toast } = useToast();
@@ -18,24 +25,51 @@ const ContactSection = () => {
     setFormData(prev => ({ ...prev, [name]: value }));
   };
   
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate form submission
-    setTimeout(() => {
+    try {
+      // Prepare the template parameters
+      const templateParams = {
+        from_name: formData.name,
+        from_email: formData.email,
+        podcast_name: formData.podcast,
+        message: formData.message,
+        to_email: 'Lennyskolnik@gmail.com'
+      };
+      
+      // Send the email
+      await emailjs.send(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        templateParams,
+        EMAILJS_USER_ID
+      );
+      
+      // Show success message
       toast({
         title: "Request received!",
         description: "Thanks for reaching out. I'll be in touch soon to discuss your podcast's audio needs.",
       });
+      
+      // Reset form
       setFormData({
         name: '',
         email: '',
         podcast: '',
         message: ''
       });
+    } catch (error) {
+      console.error('Error sending email:', error);
+      toast({
+        title: "Something went wrong",
+        description: "We couldn't send your message. Please try again later.",
+        variant: "destructive"
+      });
+    } finally {
       setIsSubmitting(false);
-    }, 1500);
+    }
   };
   
   return (
@@ -163,7 +197,7 @@ const ContactSection = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.5, delay: 0.3 }}
           >
-            <p className="text-muted-foreground">Prefer to reach out directly? Email me at <a href="mailto:contact@yungspielburg.com" className="text-coral font-medium">contact@yungspielburg.com</a></p>
+            <p className="text-muted-foreground">Prefer to reach out directly? Email me at <a href="mailto:Lennyskolnik@gmail.com" className="text-coral font-medium">Lennyskolnik@gmail.com</a></p>
           </motion.div>
         </div>
       </div>
