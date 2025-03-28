@@ -35,7 +35,7 @@ const ContactSection = () => {
         name: formData.name,        // {{name}} in the EmailJS template
         reply_to: formData.email,   // Changed to reply_to as it's a common EmailJS parameter
         email: formData.email,      // Also include as email for backward compatibility
-        podcastname: formData.podcast, // Changed to podcastname to match {{podcastname}} in template
+        podcastname: formData.podcast, // {{podcastname}} in the EmailJS template
         message: formData.message,
         to_name: 'Lenny',           // Adding recipient name for better email formatting
         to_email: 'Lennyskolnik@gmail.com'
