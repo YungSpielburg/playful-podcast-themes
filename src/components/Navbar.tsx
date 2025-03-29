@@ -1,6 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -24,7 +25,7 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <a href="/" className="text-2xl font-display font-bold text-foreground flex items-center gap-2">
+        <Link to="/" className="text-2xl font-display font-bold text-foreground flex items-center gap-2">
           <div className="flex space-x-[2px]">
             <div className="w-1 h-5 bg-gold rounded-full animate-wave-1"></div>
             <div className="w-1 h-6 bg-gold rounded-full animate-wave-2"></div>
@@ -33,12 +34,13 @@ const Navbar = () => {
             <div className="w-1 h-3 bg-gold rounded-full animate-wave-5"></div>
           </div>
           <span className="glow-gold">Yung Spielburg</span>
-        </a>
+        </Link>
         
         <div className="hidden md:flex items-center space-x-8">
           <a href="#portfolio" className="navlink">Portfolio</a>
           <a href="#services" className="navlink">Services</a>
           <a href="#about" className="navlink">About</a>
+          <Link to="/podcast-intro-music" className="navlink">Podcast Intro Music</Link>
           <a href="#contact" className="btn-primary">Connect With Me</a>
         </div>
         
