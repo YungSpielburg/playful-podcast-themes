@@ -11,7 +11,7 @@ const DirectContact = () => {
       transition={{ duration: 0.5, delay: 0.3 }}
     >
       <p className="text-muted-foreground">
-        Prefer to reach out directly? Email me at <a href="mailto:Lennyskolnik@gmail.com" className="text-coral font-medium">Lennyskolnik@gmail.com</a>
+        Prefer to reach out directly? Email me at <a href="mailto:yspodcastintromusic@gmail.com" className="text-accent font-medium">yspodcastintromusic@gmail.com</a>
       </p>
     </motion.div>
   );
