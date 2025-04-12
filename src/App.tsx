@@ -22,7 +22,7 @@ const App = () => {
             <Routes>
               <Route path="/" element={<Navigate to="/podcast-intro-music" replace />} />
               <Route path="/podcast-intro-music" element={<PodcastIntroMusic />} />
-              {/* Removed /how-to route */}
+              {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
               <Route path="*" element={<NotFound />} />
             </Routes>
           </TooltipProvider>
