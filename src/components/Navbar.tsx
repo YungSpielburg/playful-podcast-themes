@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 import { Link, useLocation } from 'react-router-dom';
@@ -7,7 +6,6 @@ const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
   const isPodcastIntroMusicPage = location.pathname === '/podcast-intro-music';
-  const isHowToPage = location.pathname === '/how-to';
   
   useEffect(() => {
     const handleScroll = () => {
@@ -44,7 +42,6 @@ const Navbar = () => {
           <a href="#services" className="navlink">Services</a>
           <a href="#about" className="navlink">About</a>
           {!isPodcastIntroMusicPage && <Link to="/podcast-intro-music" className="navlink">Podcast Intro Music</Link>}
-          {!isHowToPage && <Link to="/how-to" className="navlink">How To</Link>}
           <a href="#contact" className="btn-primary">Connect With Me</a>
         </div>
         
