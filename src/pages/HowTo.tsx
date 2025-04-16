@@ -1,7 +1,54 @@
 import React from 'react';
 import { Music, Users, BookOpen, PenTool, UsersRound } from 'lucide-react';
+import AudioPlayer from '@/components/AudioPlayer';
+import { useState } from 'react';
+
+const podcasts = [
+  { 
+    name: 'All In Podcast', 
+    description: 'Theme music',
+    audioFile: '/wet-your-beak.mp3',
+    image: '/all-in-image.jpg',
+    hideText: true,
+    buttonPosition: 'bottom' as const
+  },
+  { 
+    name: 'Acquired.fm', 
+    description: 'Custom intro',
+    audioFile: '/who-got-the-truth-fixed.mp3',
+    image: '/acquired-podcast-jpg.jpeg',
+    hideText: true,
+    buttonPosition: 'bottom' as const
+  },
+  { 
+    name: 'The Happy Dentist', 
+    description: 'Theme song',
+    audioFile: '/happy-dentist.mp3',
+    image: '/happy-dentist-image-2.jpeg',
+    hideText: true,
+    buttonPosition: 'bottom' as const
+  },
+  { 
+    name: 'A16Z', 
+    description: 'Theme music',
+    audioFile: '/a16z-15s-b.mp3',
+    image: '/a16z-image-2.jpg',
+    hideText: true,
+    buttonPosition: 'bottom' as const
+  },
+];
 
 const HowTo = () => {
+  const [playingIndex, setPlayingIndex] = useState<number | null>(null);
+
+  const togglePlayPause = (index: number) => {
+    if (playingIndex === index) {
+      setPlayingIndex(null);
+    } else {
+      setPlayingIndex(index);
+    }
+  };
+
   return (
     <div className="min-h-screen bg-dark-bg text-foreground pt-24">
       <div className="container mx-auto px-4">
@@ -17,6 +64,23 @@ const HowTo = () => {
             themes for the world's top podcasts including The All In Podcast, Acquired.fm, Not Boring, and many more. 
             Below is my method for creating iconic musical themes.
           </p>
+        </div>
+
+        {/* Audio Players Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-[800px] mx-auto mb-16">
+          {podcasts.map((podcast, index) => (
+            <AudioPlayer
+              key={podcast.name}
+              name={podcast.name}
+              description={podcast.description}
+              audioFile={podcast.audioFile}
+              image={podcast.image}
+              isPlaying={playingIndex === index}
+              onTogglePlay={() => togglePlayPause(index)}
+              hideText={podcast.hideText}
+              buttonPosition={podcast.buttonPosition}
+            />
+          ))}
         </div>
 
         {/* Process Steps */}
