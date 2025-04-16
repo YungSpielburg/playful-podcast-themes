@@ -28,23 +28,7 @@ const Navbar = () => {
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="text-2xl font-display font-bold text-foreground flex items-center gap-2">
-          {isHowToPage ? (
-            <div className="flex space-x-[2px]">
-              <div className="w-1 h-5 bg-gold rounded-full animate-wave-1"></div>
-              <div className="w-1 h-6 bg-gold rounded-full animate-wave-2"></div>
-              <div className="w-1 h-4 bg-gold rounded-full animate-wave-3"></div>
-              <div className="w-1 h-7 bg-gold rounded-full animate-wave-4"></div>
-              <div className="w-1 h-3 bg-gold rounded-full animate-wave-5"></div>
-            </div>
-          ) : (
-            <div className="flex space-x-[2px]">
-              <div className="w-1 h-5 bg-gold rounded-full animate-wave-1"></div>
-              <div className="w-1 h-6 bg-gold rounded-full animate-wave-2"></div>
-              <div className="w-1 h-4 bg-gold rounded-full animate-wave-3"></div>
-              <div className="w-1 h-7 bg-gold rounded-full animate-wave-4"></div>
-              <div className="w-1 h-3 bg-gold rounded-full animate-wave-5"></div>
-            </div>
-          )}
+          Yung Spielburg
         </Link>
         
         <div className="hidden md:flex items-center space-x-8">
