@@ -1,3 +1,4 @@
+
 import React from 'react';
 import { Music, PenTool, BookOpen, Users, UsersRound } from 'lucide-react';
 import ProcessStep from './ProcessStep';
@@ -6,7 +7,7 @@ const ProcessSteps = () => {
   return (
     <div className="grid gap-16 mb-16">
       <ProcessStep icon={Music} title="Discovery Phase">
-        <p className="font-gotham text-lg mb-4">The goal of this phase is to <span className="text-accent">become a fan</span> — to understand the temperament of the hosts, the material, the delivery style, and how the hosts and fans feel about each element.</p>
+        <p className="font-gotham text-lg mb-4">The goal of this phase is to <span className="text-accent font-bold">become a fan</span> — to understand the temperament of the hosts, the material, the delivery style, and how the hosts and fans feel about each element.</p>
         <ul className="font-gotham list-disc list-inside space-y-2 text-muted-foreground">
           <li>Listen to 10-20 hours of episodes</li>
           <li>Join the show's community (Slack, Discord, etc.)</li>
@@ -15,7 +16,7 @@ const ProcessSteps = () => {
       </ProcessStep>
 
       <ProcessStep icon={PenTool} title="Creative Exploration">
-        <p className="font-gotham text-lg mb-4">The goal of this phase is to understand the <span className="text-accent">feeling</span> the host wants to invoke with their intro.</p>
+        <p className="font-gotham text-lg mb-4">The goal of this phase is to understand the <span className="text-[#D946EF] font-bold">feeling</span> the host wants to invoke with their intro.</p>
         <div className="bg-background/40 p-6 rounded-md mb-6">
           <p className="font-gotham text-xl font-semibold text-gold mb-2">⚠️ MAKE SURE ALL DECISION MAKERS ARE AT THIS MEETING! ⚠️</p>
           <p>You don't want to get 15 hours into an idea to learn that one of the decision makers was never bought into the concept from the beginning.</p>
@@ -37,7 +38,7 @@ const ProcessSteps = () => {
 
       <ProcessStep icon={BookOpen} title="References">
         <p className="font-gotham text-lg mb-4">
-          If they have direct references, make sure to get <span className="text-accent">extremely specific</span> about <span className="text-accent">exactly</span> what they like about each one.
+          If they have direct references, make sure to get <span className="text-[#D946EF] font-bold">extremely specific</span> about <span className="text-[#D946EF] font-bold">exactly</span> what they like about each one.
         </p>
         <p className="font-gotham text-lg mb-4">
           The last thing you want is to take inspiration from a melody when what they really liked was "that sparkly sound at 1:47."
@@ -49,7 +50,7 @@ const ProcessSteps = () => {
       </ProcessStep>
 
       <ProcessStep icon={Users} title="Songwriting Process">
-        <p className="font-gotham text-lg mb-4">When it comes down to the actual song, I have two approaches: <span className="text-accent">Direct and Serendipitous</span>.</p>
+        <p className="font-gotham text-lg mb-4">When it comes down to the actual song, I have two approaches: <span className="text-[#D946EF] font-bold">Direct and Serendipitous</span>.</p>
         
         <p className="font-gotham text-lg mb-4">
           The theme for The All In Podcast is a great example of the direct method. The very first thing you hear is:
@@ -66,7 +67,7 @@ const ProcessSteps = () => {
         </p>
 
         <p className="font-gotham text-lg mb-6">
-          Sometimes hosts want to be less "on the nose" — either personality-wise or because the title of the show doesn't lend itself to that method. In that case, we turn to the <span className="text-accent">Serendipitous</span> method where we drill down into the essence of the show and genuinely write a song about it. It feels as though there is this incredible song that just so happens to exactly reflect the show's values.
+          Sometimes hosts want to be less "on the nose" — either personality-wise or because the title of the show doesn't lend itself to that method. In that case, we turn to the <span className="text-[#D946EF] font-bold">Serendipitous</span> method where we drill down into the essence of the show and genuinely write a song about it. It feels as though there is this incredible song that just so happens to exactly reflect the show's values.
         </p>
 
         <p className="font-gotham text-lg mb-4">
@@ -84,7 +85,7 @@ const ProcessSteps = () => {
 
       <ProcessStep icon={UsersRound} title="Iterative Collaboration">
         <p className="font-gotham text-lg mb-4">Be ready to deliver exactly what a client asked for and have them realize it's actually not what they wanted. That's okay.</p>
-        <p className="font-gotham text-lg text-accent">This is iterative and collaborative — enjoy the process!</p>
+        <p className="font-gotham text-lg text-[#D946EF] font-bold">This is iterative and collaborative — enjoy the process!</p>
       </ProcessStep>
     </div>
   );
