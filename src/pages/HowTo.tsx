@@ -88,7 +88,7 @@ const HowTo = () => {
               <Users className="w-8 h-8 text-gold" />
               <h2 className="font-gotham text-2xl md:text-3xl font-bold">Songwriting Process</h2>
             </div>
-            <p className="font-gotham text-lg mb-4">When it comes down to the actual song, I have two approaches: <span className="text-[#D946EF]">Direct and Serendipitous</span>.</p>
+            <p className="font-gotham text-lg mb-4">When it comes down to the actual song, I have two approaches: <span className="text-accent">Direct and Serendipitous</span>.</p>
             
             <p className="font-gotham text-lg mb-4">
               The theme for The All In Podcast is a great example of the direct method. The very first thing you hear is:
@@ -105,7 +105,7 @@ const HowTo = () => {
             </p>
 
             <p className="font-gotham text-lg mb-6">
-              Sometimes hosts want to be less "on the nose" — either personality-wise or because the title of the show doesn't lend itself to that method. In that case, we turn to the Serendipitous method where we drill down into the essence of the show and genuinely write a song about it. It feels as though there is this incredible song that just so happens to exactly reflect the show's values.
+              Sometimes hosts want to be less "on the nose" — either personality-wise or because the title of the show doesn't lend itself to that method. In that case, we turn to the <span className="text-accent">Serendipitous</span> method where we drill down into the essence of the show and genuinely write a song about it. It feels as though there is this incredible song that just so happens to exactly reflect the show's values.
             </p>
 
             <p className="font-gotham text-lg mb-4">
