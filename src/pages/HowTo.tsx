@@ -46,10 +46,18 @@ const HowTo = () => {
               <p className="font-gotham text-xl font-semibold text-gold mb-2">⚠️ MAKE SURE ALL DECISION MAKERS ARE AT THIS MEETING! ⚠️</p>
               <p>You don't want to get 15 hours into an idea to learn that one of the decision makers was never bought into the concept from the beginning.</p>
             </div>
+            <p className="font-gotham text-lg mb-4">
+              You can start by asking outright, but oftentimes words are insufficient, generic, and you'd be surprised how different the associations and feelings are that people have for the same words. A much better strategy is to ask questions that get them to illustrate the answer.
+            </p>
             <h3 className="font-gotham text-xl font-semibold mb-4">Golden Questions:</h3>
-            <ul className="font-gotham list-disc list-inside space-y-2 text-muted-foreground">
+            <ul className="font-gotham list-disc list-inside space-y-2 text-muted-foreground mb-6">
               <li>If you were to host a live event, what musical guest would you have and why?</li>
               <li>Why are your fans in the audience? What bonds them to each other, and to you?</li>
+            </ul>
+            <p className="font-gotham text-lg mb-2">I give 2 examples here:</p>
+            <ul className="font-gotham space-y-2 text-muted-foreground">
+              <li>Florence and The Machine: We go to their concert to put our soul through the washing machine.</li>
+              <li>Diplo in Ibiza: If you were 25, you might go to this show to let off some steam ;)</li>
             </ul>
           </section>
 
@@ -59,6 +67,9 @@ const HowTo = () => {
               <BookOpen className="w-8 h-8 text-gold" />
               <h2 className="font-gotham text-2xl md:text-3xl font-bold">References</h2>
             </div>
+            <p className="font-gotham text-lg mb-4">
+              The last thing you want is to take inspiration from a melody when what they really liked was "that sparkly sound at 1:47."
+            </p>
             <p className="font-gotham text-lg mb-4">Have the hosts make a playlist of music they like and that is relevant to the show.</p>
             <p className="font-gotham text-lg mb-4">
               If they have direct references, make sure to get <span className="text-accent">extremely specific</span> about <span className="text-accent">exactly</span> what they like about each one.
