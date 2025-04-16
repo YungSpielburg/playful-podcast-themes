@@ -1,6 +1,4 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import { ArrowLeft } from 'lucide-react';
 import HeaderSection from '@/components/how-to/HeaderSection';
 import ProcessSteps from '@/components/how-to/ProcessSteps';
 
@@ -53,14 +51,6 @@ const HowTo = () => {
   return (
     <div className="min-h-screen bg-dark-bg text-foreground pt-24">
       <div className="container mx-auto px-4">
-        <Link 
-          to="/" 
-          className="inline-flex items-center gap-2 text-accent hover:text-accent-light transition-colors mb-8"
-        >
-          <ArrowLeft className="w-5 h-5" />
-          <span className="font-gotham">Back to Home</span>
-        </Link>
-
         <HeaderSection 
           podcasts={podcasts}
           playingIndex={playingIndex}
