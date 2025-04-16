@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Music, Users, BookOpen, PenTool, UsersRound } from 'lucide-react';
 
@@ -111,4 +110,3 @@ const HowTo = () => {
 };
 
 export default HowTo;
-
