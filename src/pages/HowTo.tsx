@@ -55,7 +55,7 @@ const HowTo = () => {
               <li>Why are your fans in the audience? What bonds them to each other, and to you?</li>
             </ul>
             <p className="font-gotham text-lg mb-2">I give 2 examples here:</p>
-            <ul className="font-gotham space-y-2 text-muted-foreground">
+            <ul className="font-gotham space-y-2 text-muted-foreground list-disc list-inside">
               <li>Florence and The Machine: We go to their concert to put our soul through the washing machine.</li>
               <li>Diplo in Ibiza: If you were 25, you might go to this show to let off some steam ;)</li>
             </ul>
