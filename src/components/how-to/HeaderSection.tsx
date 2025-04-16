@@ -19,7 +19,7 @@ interface HeaderSectionProps {
 
 const HeaderSection = ({ podcasts, playingIndex, onTogglePlay }: HeaderSectionProps) => {
   return (
-    <div className="relative mb-16">
+    <div className="relative mb-32">
       {/* Left Audio Players */}
       <div className="absolute left-0 top-0 space-y-4 w-[200px]">
         <AudioPlayer

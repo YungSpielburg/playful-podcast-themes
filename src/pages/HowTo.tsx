@@ -57,7 +57,9 @@ const HowTo = () => {
           playingIndex={playingIndex}
           onTogglePlay={togglePlayPause}
         />
-        <ProcessSteps />
+        <div className="mt-48 md:mt-52">
+          <ProcessSteps />
+        </div>
         
         {/* Contact */}
         <div className="text-center pb-16">
