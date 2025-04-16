@@ -1,4 +1,6 @@
+
 import React, { useState } from 'react';
+import Navbar from '@/components/Navbar';
 import HeaderSection from '@/components/how-to/HeaderSection';
 import ProcessSteps from '@/components/how-to/ProcessSteps';
 
@@ -49,8 +51,9 @@ const HowTo = () => {
   };
 
   return (
-    <div className="min-h-screen bg-dark-bg text-foreground pt-24">
-      <div className="container mx-auto px-4">
+    <div className="min-h-screen bg-dark-bg text-foreground">
+      <Navbar />
+      <div className="container mx-auto px-4 pt-24">
         <HeaderSection 
           podcasts={podcasts}
           playingIndex={playingIndex}
