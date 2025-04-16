@@ -110,8 +110,8 @@ const HeaderSection = ({ podcasts, playingIndex, onTogglePlay }: HeaderSectionPr
               </p>
             </div>
             
-            {/* Single column layout for audio players */}
-            <div className="flex flex-col space-y-4 w-full max-w-[200px]">
+            {/* Single column layout for audio players with increased size */}
+            <div className="flex flex-col space-y-6 w-full px-4 max-w-[90%]">
               {podcasts.map((podcast, index) => (
                 <AudioPlayer
                   key={podcast.name}
