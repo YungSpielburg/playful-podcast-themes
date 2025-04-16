@@ -27,7 +27,7 @@ const Navbar = () => {
       transition={{ duration: 0.5 }}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link to="/" className="text-2xl font-display font-bold text-foreground flex items-center gap-2">
+        <Link to="/" className="text-2xl font-display font-bold text-foreground flex items-center gap-2 opacity-0">
           Yung Spielburg
         </Link>
         
