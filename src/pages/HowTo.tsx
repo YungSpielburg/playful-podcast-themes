@@ -96,7 +96,7 @@ const HowTo = () => {
             <blockquote className="border-l-4 border-gold pl-4 italic my-4">
               "I'm going All In."
             </blockquote>
-            <p className="text-muted-foreground text-base italic mb-6">
+            <p className="font-gotham text-lg mb-6">
               This method believes the most important thing is name recognition, and so my job is to find the single catchiest, most powerful way to deliver the title of the show.
             </p>
 
