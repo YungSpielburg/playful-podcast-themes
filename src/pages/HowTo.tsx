@@ -88,7 +88,7 @@ const HowTo = () => {
               <Users className="w-8 h-8 text-gold" />
               <h2 className="font-gotham text-2xl md:text-3xl font-bold">Songwriting Process</h2>
             </div>
-            <p className="font-gotham text-lg mb-4">When it comes down to the actual song, I have two approaches: Direct and Serendipitous.</p>
+            <p className="font-gotham text-lg mb-4">When it comes down to the actual song, I have two approaches: <span className="text-[#D946EF]">Direct and Serendipitous</span>.</p>
             
             <p className="font-gotham text-lg mb-4">
               The theme for The All In Podcast is a great example of the direct method. The very first thing you hear is:
