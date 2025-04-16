@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -40,6 +40,7 @@ const Navbar = () => {
           <a href="#portfolio" className="navlink">Portfolio</a>
           <a href="#services" className="navlink">Services</a>
           <a href="#about" className="navlink">About</a>
+          <Link to="/how-to" className="navlink">How To</Link>
           <a href="#contact" className="btn-primary">Connect With Me</a>
         </div>
         
