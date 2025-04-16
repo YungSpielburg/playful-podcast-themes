@@ -94,7 +94,7 @@ const HeaderSection = ({ podcasts, playingIndex, onTogglePlay }: HeaderSectionPr
         </>
       ) : (
         <>
-          {/* Mobile Layout - Stacked content */}
+          {/* Mobile Layout - Complete vertical layout */}
           <div className="flex flex-col items-center">
             {/* Heading and text first */}
             <div className="text-center mx-auto max-w-sm mb-8">
@@ -103,15 +103,15 @@ const HeaderSection = ({ podcasts, playingIndex, onTogglePlay }: HeaderSectionPr
                 <br />
                 <span className="text-accent">A Signature Sound</span>
               </h1>
-              <p className="font-gotham text-sm text-muted-foreground px-4">
+              <p className="font-gotham text-sm text-muted-foreground px-4 mb-6">
                 I'm Yung Spielburg, a Grammy award-winning producer and songwriter who has produced 
                 themes for the world's top podcasts including The All In Podcast, Acquired.fm, Not Boring, and many more. 
                 Below is my method for creating iconic musical themes.
               </p>
             </div>
             
-            {/* Grid for audio players below */}
-            <div className="grid grid-cols-2 gap-4 w-full max-w-[320px] px-4">
+            {/* Single column layout for audio players */}
+            <div className="flex flex-col space-y-4 w-full max-w-[200px]">
               {podcasts.map((podcast, index) => (
                 <AudioPlayer
                   key={podcast.name}
