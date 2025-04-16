@@ -74,6 +74,9 @@ const HowTo = () => {
             <p className="font-gotham text-lg mb-4">
               If they have direct references, make sure to get <span className="text-accent">extremely specific</span> about <span className="text-accent">exactly</span> what they like about each one.
             </p>
+            <p className="font-gotham text-lg mb-4">
+              The last thing you want is to take inspiration from a melody when what they really liked was "that sparkly sound at 1:47."
+            </p>
             <blockquote className="border-l-4 border-gold pl-4 italic my-4">
               "What songs come on before and after you on the radio?"
             </blockquote>
@@ -86,11 +89,35 @@ const HowTo = () => {
               <h2 className="font-gotham text-2xl md:text-3xl font-bold">Songwriting Process</h2>
             </div>
             <p className="font-gotham text-lg mb-4">When it comes down to the actual song, I have two approaches: Direct and Serendipitous.</p>
+            
+            <p className="font-gotham text-lg mb-4">
+              The theme for The All In Podcast is a great example of the direct method. The very first thing you hear is:
+            </p>
             <blockquote className="border-l-4 border-gold pl-4 italic my-4">
               "I'm going All In."
             </blockquote>
-            <p className="text-muted-foreground">
+            <p className="text-muted-foreground mb-6">
               This method believes the most important thing is name recognition, and so my job is to find the single catchiest, most powerful way to deliver the title of the show.
+            </p>
+
+            <p className="font-gotham text-lg mb-4">
+              I've had a songwriting belief and philosophy throughout my career that words or phrases have a single best melody. When you think of the all-time great songs, those writers have found that singular greatest pairing.
+            </p>
+
+            <p className="font-gotham text-lg mb-6">
+              Sometimes hosts want to be less "on the nose" — either personality-wise or because the title of the show doesn't lend itself to that method. In that case, we turn to the Serendipitous method where we drill down into the essence of the show and genuinely write a song about it. It feels as though there is this incredible song that just so happens to exactly reflect the show's values.
+            </p>
+
+            <p className="font-gotham text-lg mb-4">
+              For Acquired, we actually first composed a theme where I sang the title of the show, but upon hearing it, Ben and David realized it was not the right direction. We later drilled down into the essence of the show, which is to get the truth. And so, I wrote the line:
+            </p>
+            
+            <blockquote className="border-l-4 border-gold pl-4 italic my-4">
+              "Who got the truth?"
+            </blockquote>
+
+            <p className="font-gotham text-lg">
+              I reached out to the iconic singer, Mike Taylor, and we wrote the song that you all know and love today.
             </p>
           </section>
 
