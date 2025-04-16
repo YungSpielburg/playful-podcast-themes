@@ -42,10 +42,10 @@ const ProcessSteps = () => {
         <p className="font-gotham text-lg mb-4">
           The last thing you want is to take inspiration from a melody when what they really liked was "that sparkly sound at 1:47."
         </p>
-        <p className="font-gotham text-lg mb-4">Have the hosts make a playlist of music they like and that is relevant to the show.</p>
         <blockquote className="border-l-4 border-gold pl-4 italic my-4">
           "What songs come on before and after you on the radio?"
         </blockquote>
+        <p className="font-gotham text-lg mb-4">Have the hosts make a playlist of music they like and that is relevant to the show.</p>
       </ProcessStep>
 
       <ProcessStep icon={Users} title="Songwriting Process">
