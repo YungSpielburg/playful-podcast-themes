@@ -29,7 +29,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center">
         <Link to="/" className="text-2xl font-display font-bold text-foreground flex items-center gap-2">
           {isHowToPage ? (
-            <span className="text-accent hover:text-accent-light transition-colors">← Back</span>
+            <span className="text-accent hover:text-accent-light transition-colors">Yung Spielburg</span>
           ) : (
             <div className="flex space-x-[2px]">
               <div className="w-1 h-5 bg-gold rounded-full animate-wave-1"></div>
@@ -43,11 +43,17 @@ const Navbar = () => {
         </Link>
         
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#portfolio" className="navlink">Portfolio</a>
-          <a href="#services" className="navlink">Services</a>
-          <a href="#about" className="navlink">About</a>
-          <Link to="/how-to" className="navlink">How To</Link>
-          <a href="#contact" className="btn-primary">Connect With Me</a>
+          {isHowToPage ? (
+            <Link to="/" className="navlink">Home</Link>
+          ) : (
+            <>
+              <a href="#portfolio" className="navlink">Portfolio</a>
+              <a href="#services" className="navlink">Services</a>
+              <a href="#about" className="navlink">About</a>
+              <Link to="/how-to" className="navlink">How To</Link>
+              <a href="#contact" className="btn-primary">Connect With Me</a>
+            </>
+          )}
         </div>
         
         <button className="md:hidden text-foreground">
@@ -61,3 +67,4 @@ const Navbar = () => {
 };
 
 export default Navbar;
+
