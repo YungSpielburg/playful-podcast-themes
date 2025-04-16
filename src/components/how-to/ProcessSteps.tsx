@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Music, PenTool, BookOpen, Users, UsersRound } from 'lucide-react';
 import ProcessStep from './ProcessStep';
@@ -38,12 +37,12 @@ const ProcessSteps = () => {
 
       <ProcessStep icon={BookOpen} title="References">
         <p className="font-gotham text-lg mb-4">
+          If they have direct references, make sure to get <span className="text-accent">extremely specific</span> about <span className="text-accent">exactly</span> what they like about each one.
+        </p>
+        <p className="font-gotham text-lg mb-4">
           The last thing you want is to take inspiration from a melody when what they really liked was "that sparkly sound at 1:47."
         </p>
         <p className="font-gotham text-lg mb-4">Have the hosts make a playlist of music they like and that is relevant to the show.</p>
-        <p className="font-gotham text-lg mb-4">
-          If they have direct references, make sure to get <span className="text-accent">extremely specific</span> about <span className="text-accent">exactly</span> what they like about each one.
-        </p>
         <blockquote className="border-l-4 border-gold pl-4 italic my-4">
           "What songs come on before and after you on the radio?"
         </blockquote>
